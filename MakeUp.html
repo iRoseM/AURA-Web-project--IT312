@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Aura - Makeup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+
+    <div class="navbar">
+        <div class="logo"> 
+          <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
+      </div>
+      
+        <nav>
+          <ul>
+            <li><a href="Homepage.html" accesskey="h">Home</a></li>
+            <li><a href="Skincare.html" accesskey="s">Skin Care</a></li>
+            <li><a href="MakeUp.html" accesskey="m">Makeup</a></li>
+            <li><a href="HairTools.html" accesskey="t">Hair Tools</a></li>
+            <li><a href="sellerPage.html" accesskey="l">Seller</a></li>
+          </ul>
+        </nav>
+        <div class="user-cart">
+            <a href="UserPage.html" accesskey="u"><img src="homepage-images/user.png" alt="user page" id="userticon"></a>
+            <a href="CartPage.html" accesskey="c"><img src="homepage-images/cart.png" alt="cart page" id="carticon"></a>
+            <input type="image" src="homepage-images/darktheme.png" alt="darktheme" width="33rem" id="themeSelect">
+        </div>
+    </div>
+
+
+    <ul class="breadcrumb">
+        <li><a href="Homepage.html">Home</a></li>
+        <li id="CurrentPage"><a href="MakeUp.html">Makeup</a></li>
+    </ul>
+
+ <h1 id="titleHeader">MAKEUP</h1>
+
+    <div class="sort-dropdown">
+        <label for="sort">Sort: </label>
+        <select id="sort" name="Sort">
+            <optgroup label="Price" >
+                <option value="low-high">Price: Low - High </option>
+                <option value="high-low">Price: High - Low </option>
+            </optgroup>
+        </select>
+    </div>
+     
+    <div class="catehorizProducts">
+        <!-- Product 1 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/blush2.jpg" alt="Pretty Fly Cream Blush">
+            <img class="cateprodPic" src="images/blush2hov.jpg" alt="Pretty Fly Cream Blush" data-hover="images/blush2.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Pretty Fly Cream Blush</h2>
+                <p class="cateprodBrand">Doll Beauty</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">25.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>
+        </div>
+         <!-- Product 2 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/eyeshadow.jpg" alt="Eyeshadow Petite Tchoin - Martine Cosmetics">
+            <img class="cateprodPic" src="images/eyeshadowhov.jpg" alt="Eyeshadow Petite Tchoin - Martine Cosmetics" data-hover="images/eyeshadow.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Eyeshadow Petite Tchoin</h2>
+                <p class="cateprodBrand">Martine Cosmetics</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">45.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/gloss.jpg" alt="Gloss Bomb" width="200" height="200">
+            <img class="cateprodPic" src="images/glosshov.jpg" alt="Gloss Bomb" data-hover="images/gloss.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Gloss Bomb</h2>
+                <p class="cateprodBrand">FENTY BEAUTY</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">20.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>   
+        </div>
+    </div>
+    <div class="catehorizProducts">
+        <!-- Product 4 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/mascara.jpg" alt="Lash Mascara" width="200" height="200">
+            <img class="cateprodPic" src="images/mascarahov.jpg" alt="Lash Mascara" data-hover="images/mascara.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Lash Mascara</h2>
+                <p class="cateprodBrand">Makeup Revolution</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">15.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+                </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/SkinTint.jpg" alt="Skin Tint" width="200" height="200">
+            <img class="cateprodPic" src="images/SkinTinthov.jpg" alt="Skin Tint" data-hover="images/SkinTint.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Skin Tint</h2>
+                <p class="cateprodBrand">Anastasia Beverly Hills</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">25.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>
+        
+        </div>
+
+        <!-- Product 6 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/Concealer.jpg" alt="Concealer" width="200" height="200">
+            <img class="cateprodPic" src="images/Concealerhov.jpg" alt="Concealer" data-hover="images/Concealer.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Concealer</h2>
+                <p class="cateprodBrand">Maybelline</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">18.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="catehorizProducts">
+        <!-- Product 7 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/Highlight.jpg" alt="Highlight" width="200" height="200">
+            <img class="cateprodPic" src="images/highlighterhov.jpg" alt="Highlight" data-hover="images/Highlight.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Highlight</h2>
+                <p class="cateprodBrand">Ofra</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">12.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/Bronzer.jpg" alt="Bronzer" width="200" height="200">
+            <img class="cateprodPic" src="images/Bronzerhov.jpg" alt="Bronzer" data-hover="images/Bronzer.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Bronzer</h2>
+                <p class="cateprodBrand">NYX Professional Makeup</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">10.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>
+           
+            
+        </div>
+
+        <!-- Product 9 -->
+        <div class="cateproduct">
+            <img class="cateprodPic" src="images/BrowStain.jpg" alt="Brow Stain" width="200" height="200">
+            <img class="cateprodPic" src="images/BrowStainhov.jpg" alt="Brow Stain" data-hover="images/BrowStain.jpg">
+            <div class="cateprodDetails">
+                <h2 class="cateprodTitle">Brow Stain</h2>
+                <p class="cateprodBrand">WONDERSKIN</p>
+                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodPrice">35.00 SAR</p>
+                <p class="cateprodAvailability">In Stock</p>
+                <button class="cateprodAddToCart">Add to Cart</button>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="contact">
+            <p>Contact Information</p>
+            <p>📞 +996555555555</p>
+            <p>✉️ Aura@gmail.com</p>
+            <div class="social-media">
+                <a href="https://www.snapchat.com" target="_blank" title="snapchat" class="fab fa-snapchat"></a>
+                <a href="https://www.instagram.com" target="_blank" title="instagram" class="fab fa-instagram"> </a>
+                <a href="https://www.twitter.com" target="_blank" title="twitter" class="fab fa-twitter"></a>
+            </div>
+        </div>
+        <div id="copyright">
+        <p>&copy; 2024 Aura. All rights reserved</p>
+        </div>
+    </footer>
+    <script src="scriptingFile.js">
+
+    </script>
+</body>
+</html>

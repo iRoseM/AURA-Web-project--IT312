@@ -1,0 +1,2022 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Default styles for larger screens */
+body {
+  font-size: 16px;
+  margin: 0;
+}
+/* Body dark mode */
+body.dark-mode {
+  background-color: #2c2c2c;
+  color: #d9d9d9;
+}
+
+/* Consistent text color for all elements */
+body.dark-mode * {
+  color: #d9d9d9 !important;
+}
+
+body.dark-mode button:hover {
+  background-color: #4ecca3;
+  color: #2c2c2c;
+}
+
+
+
+
+/* For medium screens, like smaller laptops */
+@media (max-width: 1200px) {
+  body {
+      font-size: 14px;
+  }
+  body {
+    margin: 0;
+  }
+  /* Adjust any other specific elements here */
+}
+
+/* For smaller laptops and tablets */
+@media (max-width: 992px) {
+  body {
+      font-size: 12px;
+      margin: 0;
+  }
+}
+
+
+/***************************** Navigation bar ****************************/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5em;
+  background-color: #d3cbc2;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navbar nav ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.625em 1.25em;
+  color: #685852;
+  font-size: 1.125em;
+  font-weight: bolder;
+}
+
+.navbar li a:hover {
+  background-color: #EDEADE;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transform: scale(1.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo-image {
+  height: 2.5em;
+  max-width: 9.375em;
+  margin: 0 0.5em;
+}
+
+.user-cart {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-right: 3.75em;
+}
+
+.user-cart img {
+  width: 1.875em;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for icons */
+#userticon:hover, #carticon:hover, #themeSelect:hover {
+  transform: scale(1.1);
+}
+
+.navbar.dark-mode {
+  background-color: #252525;
+}
+
+/***************************** Footer ****************************/
+.main-footer {
+  width: 100%;
+  padding: 1.25em 0;
+  text-align: center;
+  border-top: 0.2em solid #ccc;
+  background-color: #fff;
+  color: #333;
+  margin-top: 1.25em;
+  padding-bottom: 0em;
+}
+
+#copyright {
+  background: #d3cbc2e8;
+  padding: 0.125em 0;
+  color: #857e77;
+}
+
+.contact {
+  width: 100%;
+  max-width: 18.75em;
+  padding: 0.625em;
+  text-align: left;
+}
+
+.social-media a {
+  margin: 0 0.3em;
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+}
+
+body.dark-mode .social-media a:hover, .social-media a:hover {
+  color: #ffcc00 !important;
+}
+/***************************** Dark Theme for Footer  ****************************/
+body.dark-mode .main-footer {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-top: 0.2em solid #444;
+}
+
+body.dark-mode #copyright {
+  background-color: #333;
+  color: #bbb;
+}
+
+body.dark-mode .contact {
+  color: #ccc;
+}
+
+body.dark-mode .social-media a {
+  color: #f5f5f5;
+}
+
+
+/***************************** Breadcrumbs ****************************/
+ul.breadcrumb {
+  margin-top: 0.625em;
+  padding: 0.625em 1em;
+  list-style: none;
+  background-color: #f7f4f1;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 0.813em;
+}
+ul.breadcrumb li+li:before {
+  padding: 0.5em;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #7c7e80;
+  text-decoration: underline;
+}
+
+li#CurrentPage a {
+  color: rgb(128, 127, 127);
+}
+
+/***************************** Breadcrumbs Dark Mode ****************************/
+body.dark-mode ul.breadcrumb {
+  background-color: #3a3a3a; 
+  color: #d1d1d1;
+}
+
+body.dark-mode ul.breadcrumb li+li:before {
+  color: #b3b3b3; 
+}
+
+body.dark-mode ul.breadcrumb li a {
+  color: #e0e0e0; 
+}
+
+body.dark-mode ul.breadcrumb li a:hover {
+  color: #4ecca3 !important; 
+}
+
+body.dark-mode li#CurrentPage a {
+  color: #a0a0a0; 
+}
+
+/***************************** Home Page ****************************/
+#titleHeader {
+  text-align: center;
+  margin: 1.25em 0;
+}
+
+#titleHeader , .subTitle {
+  font-weight: bolder;
+  font-size: 3em;
+  color: #2e2424;
+  margin: 0;
+  text-shadow: 1px 1px 0.125em #2e27279f;
+}
+
+.subTitle {
+  font-size: 2em;
+}
+
+.navButton {
+  text-align: center;
+  width: 12.5em;
+  padding: 0.625em;
+  border-radius: 0.313em;
+  font-weight: bolder;
+  font-size: 1em;
+  border: #333 solid;
+  background-color: #333;
+  color: white;
+}
+
+.navButton:hover {
+  transform: scale(1.05);
+  background-color: #555;
+}
+
+#homebody {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  
+}
+
+.bannerSlider {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 43.75em;
+  display: block;
+  object-fit: cover;
+}
+
+.vision {
+  width: 100%;
+  background-color: #d3cbc2;
+}
+
+.vision-image {
+  width: 100%;
+  max-height: 25em;
+  object-fit: cover;
+  display: block;
+}
+
+.vision-sec {
+  padding: 0.625em;
+  font-size: 1.25em;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.vision-sec h1 {
+  line-height: 4.375em;
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+/* Sales offer Section */
+.homesale-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  height: 9.375em;
+}
+
+.homeoffers {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.25em;
+  padding: 1.875em;
+  background-color: #f1f1f1;
+}
+
+.homeoffer {
+  border: 0.063em solid #ccc;
+  padding: 1.25em;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  width: 18.75em;
+  height: 31.25em;
+  flex: 0 0 auto;
+  background-color: #fff;
+  border-radius: 0.5em;
+}
+
+.homeoffer img {
+  width: 80%;
+  height: 12.5em;
+  object-fit: cover;
+  border-radius: 0.5em;
+  margin-bottom: 0.625em;
+}
+
+.homeoffer label {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.homedescription {
+  font-size: 0.875em;
+  color: #666;
+  text-align: center;
+}
+
+.homediscount-box {
+  top: 0.625em;
+  left: 1.25em;
+  padding: 0.313em;
+  font-size: 0.875em;
+  border-radius: 0.25em;
+}
+
+.homeprice {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.homeadd-to-cart {
+  background-color: #333;
+  color: #fff;
+  padding: 0.625em;
+  font-size: 0.875em;
+  cursor: pointer;
+  border-radius: 0.25em;
+}
+
+/* Categories Section */
+.homecategory-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.5em;
+  height: 9em; /* Height using em for flexibility */
+}
+
+.homecategories {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5em;
+  padding: 1.25em;
+  background-color: #fff;
+  overflow-x: auto;
+}
+
+.homecategory-item {
+  background-color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 1em;
+  width: 12em;
+  flex: 0 0 12.5vw; /* Sets item width based on viewport width */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.homecategory-item .homecategory-image img {
+  width: 80%;
+  height: 12em; /* Responsive height using em */
+  object-fit: cover;
+  border-radius: 0.5em;
+  margin-bottom: 0.625em;
+}
+
+.homecategory-item h3 {
+  font-size: 1.125em;
+  font-weight: bold;
+  color: #333;
+  margin: 0.625em 0 0 0;
+  text-decoration: none;
+}
+
+.homecategory-item a{
+  text-decoration: none;
+}
+
+/* Reviews Section */
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5em 1.25em;
+  gap: 1.25em;
+  background-color: #f1f1f1;
+  overflow-x: auto;
+}
+
+/* Individual review item */
+.review-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 0.625em rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 18.75em;
+  max-width: 25em;
+  height: 21.875em;
+  padding: 1.25em;
+  box-sizing: border-box;
+}
+
+
+/* Star icon styling */
+.star {
+  font-size: 1em;
+  color: #FFD700;
+  margin-right: 0.25em;
+}
+
+/* Horizontal product grid */
+.homeproduct-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.625em;
+  overflow-x: auto;
+}
+
+/* Individual home product */
+.homeproduct {
+  flex: 0 0 auto;
+  width: 6.25em;
+  text-align: center;
+}
+
+/* Product image */
+.homeproduct img {
+  width: 100%;
+  height: 6.25em;
+  object-fit: cover;
+  border-radius: 0.5em;
+  margin-bottom: 0.313em;
+}
+
+/* Product description */
+.homeproduct p {
+  font-size: 0.75em;
+  color: #333;
+  margin: 0;
+}
+
+/***************************** Home Page Dark Mode ****************************/
+body.dark-mode #titleHeader, 
+body.dark-mode .subTitle {
+  color: #f1f1f1;
+  text-shadow: none;
+}
+
+body.dark-mode .navButton {
+  background-color: #444;
+  color: #d9d9d9;
+  border-color: #666;
+}
+body.dark-mode .navButton:hover {
+  background-color: #4ecca3;
+  color: #2c2c2c;
+}
+
+body.dark-mode #homebody {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .banner-image {
+  filter: brightness(0.7);
+}
+
+body.dark-mode .vision {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+body.dark-mode .vision-sec h1 {
+  color: #e0e0e0;
+}
+
+/* Sales offer Section */
+body.dark-mode .homesale-header {
+  color: #f1f1f1;
+}
+
+body.dark-mode .homeoffers {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .homeoffer {
+  background-color: #3b3b3b;
+  border-color: #555;
+  color: #d9d9d9;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.4);
+}
+body.dark-mode .homeoffer img {
+  filter: brightness(0.85);
+}
+body.dark-mode .homeoffer label {
+  color: #d3d3d3;
+}
+body.dark-mode .homedescription {
+  color: #a6a6a6;
+}
+body.dark-mode .homeprice {
+  color: #f1f1f1;
+}
+body.dark-mode .homeadd-to-cart {
+  background-color: #444;
+  color: #f1f1f1;
+}
+
+/* Categories Section */
+body.dark-mode .homecategory-header {
+  color: #e0e0e0;
+}
+
+body.dark-mode .homecategories {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .homecategory-item {
+  background-color: #373737;
+  color: #e0e0e0;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.4);
+}
+body.dark-mode .homecategory-item h3 {
+  color: #e0e0e0;
+}
+
+
+
+/* Reviews Section */
+body.dark-mode .reviews {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .review-item {
+  background-color: #3c3c3c;
+  color: #d3d3d3;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.4);
+}
+
+/* Star icon styling */
+body.dark-mode .star {
+  color: #e6b800;
+}
+
+/* Horizontal product grid */
+body.dark-mode .homeproduct-grid {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .homeproduct {
+  background-color: #3b3b3b;
+  color: #d3d3d3;
+}
+body.dark-mode .homeproduct p {
+  color: #d3d3d3;
+}
+
+/* Individual review item styling */
+.review-item.dark-mode {
+  background-color: #3c3c3c;
+  color: #e0e0e0;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.4);
+  border-left: 4px solid #7f8c8d;
+}
+/***************************** Seller Page ****************************/
+.sellerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25em;
+  gap: 1.875em;
+}
+
+.sellerNav a {
+  text-decoration: none;
+}
+
+.sellersubTitle {
+  font-size: 2em; 
+  margin-left: 3.125em;
+  margin-top: 1.875em;
+}
+
+/* Product Horizontal Scrolled Container */
+.horizProducts {
+  display: flex;
+  gap: 1.25em;
+  padding: 0.625em;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  margin: 1.875em 3.125em 11.25em;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Product info */
+.product {
+  width: 20.625em;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.875em;
+  justify-content: space-between;
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+.backgroundGrey {
+  background-color: #f3f0f0f0;
+  padding: 0.625em 0;
+}
+
+.product:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.2);
+}
+
+.prodPic {
+  width: 18.75em;
+  height: 18.75em;
+  object-fit: cover;
+  margin: 0 auto 0.625em;
+}
+
+
+.prodDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+.prodTitle {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: left;
+  margin-left: 0.438em;
+  margin-top: 0.063em;
+  white-space: normal;
+}
+
+.prodRating, body.dark-mode .prodRating{
+  font-size: 1em;
+  color: #FFD700 !important;
+  white-space: nowrap;
+  margin: 0.063em 1.125em;
+}
+
+.prodPrice {
+  font-size: 1.4em;
+  font-weight: bolder;
+  margin: auto 0;
+  text-align: center;
+}
+
+.prodBrand {
+  font-size: 0.9em;
+  color: #888;
+  font-weight: bold;
+  margin: 0 0 0.625em 0.438em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.prodDescription {
+  font-size: 0.9em;
+  color: #666;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  margin: 0 0.438em;
+}
+
+.prodAvailability {
+  font-size: 0.8em;
+  margin-bottom: 0.625em;
+  color: #555;
+}
+
+.prodAvailability:hover {
+  color: #4CAF50;
+}
+
+.prodAddToCart {
+  background-color: #333;
+  color: #fff;
+  padding: 0.313em 0.625em;
+  margin: 0 5em 1.25em;
+  width: auto;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 0.313em;
+  transition: background-color 0.3s ease;
+}
+
+.prodAddToCart:hover {
+  background-color: #555;
+}
+/***************************** Seller Page Dark Mode ****************************/
+body.dark-mode .sellerNav {
+  background-color: #252525;
+  color: #d9d9d9;
+}
+
+body.dark-mode .sellerNav a {
+  color: #d9d9d9;
+}
+
+body.dark-mode .sellersubTitle {
+  color: #f1f1f1;
+}
+
+body.dark-mode .horizProducts {
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .product {
+  background-color: #2b2b2b;
+  color: #d3d3d3;
+  border: 1px solid #444;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .backgroundGrey {
+  background-color: #3b3b3b;
+}
+
+body.dark-mode .product:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .prodTitle, 
+body.dark-mode .prodBrand, 
+body.dark-mode .prodDescription, 
+body.dark-mode .prodAvailability, 
+body.dark-mode .prodPrice {
+  color: #d9d9d9;
+}
+
+body.dark-mode .prodAvailability {
+  color: #4ecca3 !important;
+}
+
+body.dark-mode .prodAddToCart {
+  background-color: #555;
+  color: #ffffff;
+  border: 1px solid #7e7e7e;
+}
+
+body.dark-mode .prodAddToCart:hover {
+  background-color: #4ecca3;
+  color: #2c2c2c;
+}
+/***************************** Offers Page ****************************/
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1.25em;
+}
+
+.offersDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  padding: 0.625em;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; 
+}
+
+.offer {
+  border: 1px solid #ccc;
+  padding: 0.625em;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  width: 12.5em;
+  height: 16.625em;
+}
+
+.offer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  border-radius: 0.5em;
+}
+
+.offer img {
+  width: 100%;
+  height: 12.5em;
+  background-color: #e0e0e0;
+  display: block;
+  margin: 0 auto 0.625em;
+  border-radius: 0.5em;
+}
+
+.discount-box {
+  position: absolute;
+  bottom: 0.625em;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 0.313em 0.625em;
+  font-size: 1.125em;
+  border-radius: 0.625em;
+}
+
+.offer label {
+  display: block;
+  margin-bottom: 0.313em;
+  text-align: center;
+  max-width: 10em;
+  word-wrap: break-word;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+
+.offer input[type="checkbox"] {
+  position: absolute;
+  bottom: 0.625em;
+  right: 0.625em;
+  transform: scale(1.5);
+}
+
+/* Adding offer form */
+.add-offer-form {
+  margin-top: 1.25em;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+.formContainer {
+  margin: 1.25em 3.5em 0em;
+  border: 1px solid #ccc;
+  padding: 2.5em;
+  border-radius: 0.5em;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1.25em;
+}
+
+.form-layout {
+  display: grid;
+  gap: 1.25em;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.625em;
+}
+
+.formGroup label {
+  margin-bottom: 0.313em;
+  font-weight: bold;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 0.625em;
+  font-size: 1em;
+  border: 1px solid #aaa;
+  border-radius: 0.25em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0.313em rgba(76, 175, 80, 0.5);
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder img {
+  width: 9.375em;
+  height: 9.375em;
+  background-color: #e0e0e0;
+}
+
+.formGroup select {
+  width: 100%;
+  padding: 0.313em;
+  font-size: 1em;
+  border-radius: 0.313em;
+}
+
+/* Removing offer button */
+.form-remove {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25em;
+  
+}
+
+.form-remove input[value="Remove Offer  X"] {
+  width: 11.25em;
+  padding: 0.75em;
+  margin-right: 3.5em;
+  background-color: rgba(227, 0, 0, 0.889);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.125em;
+  transition: background-color 0.3s ease;
+}
+
+.form-remove input[value="Remove Offer  X"]:hover {
+  background-color: rgba(176, 4, 4, 0.8); 
+}
+
+/* Adding offer button */
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin: 1.25em auto;
+  width: 100%;
+  max-width: 25em;
+}
+
+.form-submit input[value="Add Offer"] {
+  width: 100%;
+  padding: 0.625em;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875em;
+  transition: background-color 0.3s ease;
+  border-radius: 0.25em;
+}
+
+.form-submit input[value="Add Offer"]:hover {
+  background-color: #555;
+}
+
+/***************************** Offers Page Dark Theme ****************************/
+
+body.dark-mode .add-offer-form {
+  border-color: #555;
+}
+
+body.dark-mode .formContainer {
+  background-color: #333;
+  border-color: #555;
+  color: #ddd;
+  box-shadow: 0 0 0.625em rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .formTitle {
+  color: #4ecca3;
+}
+
+body.dark-mode .formGroup label {
+  color: #ddd;
+}
+
+body.dark-mode .formGroup input,
+body.dark-mode .formGroup select {
+  background-color: #555;
+  color: #ddd;
+  border-color: #777;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0.313em rgba(76, 175, 80, 0.5);
+}
+
+body.dark-mode .formGroup input:focus,
+body.dark-mode .formGroup select:focus {
+  border-color: #4ecca3;
+  box-shadow: 0 0 0.313em rgba(78, 204, 163, 0.5);
+}
+
+body.dark-mode .image-placeholder img {
+  background-color: #444;
+}
+
+body.dark-mode .form-submit input[value="Add Offer"] {
+  background-color: #4ecca3;
+  color: #2c2c2c;
+}
+
+body.dark-mode .form-submit input[value="Add Offer"]:hover {
+  background-color: #4ecca3;
+  color: #2c2c2c;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .offersDiv {
+    gap: 1em;
+  }
+
+  .offer {
+    width: 90%;
+    height: auto;
+  }
+
+  .formContainer {
+    padding: 1.25em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form-remove input[value="Remove Offer  X"],
+  .form-submit input[value="Add Offer"] {
+    width: 100%;
+  }
+}
+/***************************** Add Product Page ****************************/
+.container {
+  width: 100%;
+  padding: 1.25em;
+  background-color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+  min-height: 80vh;
+}
+
+.formBox {
+  margin-top: 1.25em;
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: #f9f9f9;
+  max-width: 50em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 37.5em;
+  margin: 0 auto;
+}
+
+/* Consistent styles for labels */
+.add-product-form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.313em;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Consistent styles for inputs */
+.add-product-form input,
+.description-textarea,
+.category-select,
+input[name="prodImageUpload"] { /* Including the image upload input here */
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.625em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+/* Specific style for the description textarea */
+.description-textarea {
+  resize: none;
+}
+
+/* Photo input alignment */
+.photo {
+  width: 100%;
+  margin-bottom: 0.625em; /* Ensures it has consistent spacing */
+}
+
+/* Add product button */
+#adproduct {
+  width: 48%;
+  padding: 0.625em;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 0.875em;
+  margin: 0.313em;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+#adproduct:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Container for buttons */
+.form-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 37.5em;
+}
+
+/***************************** Add Product Page Dark Mode ****************************/
+body.dark-mode .container {
+  background-color: #333;
+  color: #ddd;
+  box-shadow: 0 0 0.625em rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .formBox {
+  background-color: #444;
+  border-color: #555;
+  color: #ddd;
+}
+
+body.dark-mode .add-product-form label {
+  color: #ddd;
+}
+
+body.dark-mode .add-product-form input,
+body.dark-mode .description-textarea,
+body.dark-mode .category-select,
+body.dark-mode input[name="prodImageUpload"] {
+  background-color: #555;
+  color: #ddd;
+  border-color: #777;
+}
+
+body.dark-mode .description-textarea {
+  background-color: #555;
+  color: #ddd;
+}
+
+body.dark-mode .photo {
+  background-color: #555;
+  color: #ddd;
+}
+
+body.dark-mode #adproduct {
+  background-color: #4ecca3;
+  color: #2c2c2c;
+}
+
+body.dark-mode #adproduct:hover {
+  background-color: #4ecca3;
+  color: #2c2c2c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .formBox {
+    padding: 0.625em;
+    margin-top: 1em;
+  }
+
+  .add-product-form {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .form-button-container {
+    flex-direction: column;
+    gap: 0.625em;
+  }
+
+  #adproduct {
+    width: 100%;
+  }
+}
+
+/**************************** Styling Orders Page ****************************/
+
+/* Styling the whole order container */
+.Orders {
+  margin: 0 70px 100px 120px;
+}
+
+/* Styling individual order items */
+.order_item {
+  border-style: outset;
+  border-width: 1px;
+  border-radius: 7px;
+  margin: 100px auto 0 auto;
+  width: 100%;
+  max-width: 1000px; /* Restricts to maximum width */
+  height: 200px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.14);
+  background-color: white;
+}
+
+/* Styling total price and order number container */
+.Total-OrderNum {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+/* Styling the order time */
+.order_time {
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 10px;
+  border-bottom: 1px solid white;
+  padding-left: 10px;
+  border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+}
+
+/* Styling the product in the order */
+.OrderedProduct {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.14);
+  margin: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .Orders {
+    margin: 0 20px 80px 20px;
+  }
+
+  .order_item {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .Total-OrderNum,
+  .order_time {
+    font-size: 0.875em; /* Slightly smaller text on smaller screens */
+    padding: 8px 10px;
+  }
+
+  .OrderedProduct {
+    width: 60px;
+    height: 60px;
+    left: 10px;
+  }
+}
+
+/**************************** Orders Page Dark Mode ****************************/
+
+body.dark-mode .Orders {
+  background-color: #2a2a2a;
+  color: #d1d1d1;
+}
+
+body.dark-mode .order_item {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #444;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .Total-OrderNum {
+  background-color: #444;
+  color: #f1f1f1;
+  border-color: #555;
+}
+
+body.dark-mode .order_time {
+  background-color: #444;
+  color: #e0e0e0;
+  border-bottom-color: #666;
+}
+
+body.dark-mode .OrderedProduct {
+  background-color: #3a3a3a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/**************************** Product Evaluation Page ****************************/
+/* Styling the label of the order number drop menu */
+#OrderSelect label {
+  font-weight: bold;
+  position: relative;
+  left: 13.75em; 
+  top: 0.625em; 
+}
+
+/* Styling the order number drop menu */
+#OrderSelect select {
+  width: 90em; 
+  padding: 1em 1.25em; 
+  border: none;
+  border-radius: 0.25em; 
+  margin-left: 11.5em; 
+  margin-top: 1.25em; 
+  margin-bottom: 0.0625em; 
+  background-color: #f1f1f1;
+}
+
+#Evaluatation {
+  margin-top: 1.25em;
+  margin-left: 12rem;
+  box-sizing: border-box;
+}
+
+/* Styling the order evaluation section */
+.orderEvaluation {
+  border: 0.125em solid black; 
+  border-radius: 0.4375em; 
+  width: 62.5em; 
+  padding: 3.75em; 
+  height: 17.5em; 
+  margin-bottom: 0.625em;
+}
+
+/* Styling product image and name */
+.img-name {
+  display: flex; 
+}
+
+/* Styling product name */
+.product-name {
+  align-self: flex-start;
+  border: 1px; 
+  border-bottom-style: solid;
+  width: 187.5em; 
+  text-align: center;
+  margin-left: 18.75em; 
+  font-size: 1.25em; 
+  font-weight: bold;
+}
+
+/* Styling product image */
+.ProductImage {
+  border-radius: 0.625em; 
+  width: 15.625em; 
+  height: 15.625em; 
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.2), 0 0.1875em 0.625em rgba(0, 0, 0, 0.19);
+}
+
+/* Styling product details */
+.product-details {
+  display: flex;
+  justify-content: center;
+  margin-left: 31.875em; 
+}
+
+/* Styling brand name and quantity */
+.brand-name, .qty {
+  padding-right: 3.9375em; 
+  position: relative;
+  margin-right: 0.3125em; 
+  bottom: 11.875em; 
+  right: 0.0625em;
+}
+
+/* Styling brand name, quantity, and rate product */
+.brand-name, .qty, .rate {
+  text-align: left;
+}
+
+/* Styling rate product */
+.rate {
+  position: relative;
+  bottom: 9.375em; 
+  right: 18.75em; 
+}
+
+/* Styling stars */
+.stars {
+  color: #FFD700;
+  position: relative;
+  bottom: 9.5625em; 
+  right: 18em; 
+}
+
+/* Styling the evaluation form */
+.EvaluateOrder {
+  position: relative;
+  left: 32.5em;
+  bottom: 8.125em;
+}
+
+/* Styling the label in the form */
+.EvaluateOrder label {
+  text-align: left;
+  position: relative;
+  bottom: 0.625em; 
+}
+
+/* Style the total price */
+.total {
+  font-weight: bold;
+  text-align: right;
+  position: relative;
+  bottom: 11.25em; 
+}
+
+/**************************** Product Evaluation Page Dark Mode ****************************/
+
+body.dark-mode #OrderSelect label {
+  color: #e0e0e0;
+}
+
+body.dark-mode #OrderSelect select {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+body.dark-mode #Evaluatation {
+  background-color: #2c2c2c;
+  color: #d9d9d9;
+}
+
+body.dark-mode .orderEvaluation {
+  background-color: #3a3a3a;
+  border: 0.125em solid #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .product-name {
+  color: #f1f1f1;
+  border-bottom-color: #666;
+}
+
+body.dark-mode .ProductImage {
+  background-color: #2b2b2b;
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.4), 0 0.1875em 0.625em rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .product-details {
+  color: #d9d9d9;
+}
+
+body.dark-mode .brand-name, 
+body.dark-mode .qty, 
+body.dark-mode .rate {
+  color: #c5c5c5;
+}
+
+body.dark-mode .stars {
+  color: #e6b800; 
+}
+
+body.dark-mode .EvaluateOrder label {
+  color: #e0e0e0;
+}
+
+body.dark-mode .total {
+  color: #f1f1f1;
+}
+
+/**************************** Styling User Page ****************************/
+
+/* Center container for entire profile section */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling profile */
+.profile {
+  border: 1px outset;
+  border-radius: 2.1875rem; /* 35px */
+  margin: 0rem 12.5rem; /* 70px 80px */
+  height: auto;
+  width: 68.75rem; /* 1100px */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Styling the profile picture */
+.profilePicture {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px; /* Add 5px gap below the profile picture */
+}
+
+#UserPhoto {
+  height: 18.125rem; /* 290px */
+  border-radius: 50%; /* Optional: make the picture circular */
+}
+
+/* Styling the profile details */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  margin-top: 5px; /* Set 5px gap below the profile picture */
+}
+
+/* Styling the user name */
+#userName {
+  font-size: larger; 
+  font-weight: bolder;
+  margin: 0.4375rem; /* 7px */
+}
+
+/* Styling the user email */
+#UserEmail, #telphone {
+  font-size: small; 
+  font-weight: lighter;
+  margin: 0.25rem; /* 4px */
+}
+
+/* Styling the links container in user page */
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 46.875rem; /* 750px */
+  margin-top: 1rem; /* Adjust spacing from the profile */
+  margin-bottom: 1.5rem;
+}
+
+/* Styling the links in user page */
+.links a {
+  border: 1px solid;
+  border-radius: 1.875rem; /* 30px */
+  padding: 0.625rem; /* 10px */
+  width: 12.5rem; /* 200px */
+  text-decoration: none;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+/* Styling the link when the user hovers over it */
+.links a:hover {
+  background-color: #555;
+}
+
+/************************** Styling Category Page **************************/
+.category-title {
+  text-align: center;
+  margin-top: 2.5rem; /* 40px */
+  font-size: 2.5rem; /* 40px */
+}
+
+.sort-dropdown {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0.625rem 1.25rem; /* 10px 20px */
+}
+
+.sort-dropdown label {
+  margin-right: 0.625rem; 
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+}
+
+#sort {
+  padding: 0.625rem; /* 10px */
+  font-size: 1rem; /* 16px */
+  border-radius: 0.3125rem; /* 5px */
+  border: 1px solid #ccc; 
+}
+
+.sort-dropdown select {
+  width: 12.5rem; /* 200px */
+}
+
+.sort-dropdown option {
+  padding: 0.625rem; /* 10px */
+  background-color: #fff;
+}
+
+.cateprodTitle, .cateprodDetails {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.catehorizProducts {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem; /* 20px */
+  flex-wrap: wrap; 
+}
+
+.cateprodAvailability {
+  font-size: 1rem; /* 16px */
+  margin-bottom: 0.625rem; /* 10px */
+  color: #555;
+}
+
+.cateprodAvailability:hover {
+  color: #4CAF50; /* Color change on hover */
+}
+
+.cateproduct {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 0.625rem; /* 10px */
+  padding: 0.9375rem; /* 15px */
+  text-align: center;
+  margin: 1.25rem; /* 20px */
+  width: 18.75rem; /* 300px */
+  height: 31.25rem; /* 500px */
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.cateproduct img[data-hover] {
+  display: none;
+}
+
+.cateproduct:hover img[data-hover] {
+  display: block;
+}
+
+.cateproduct:hover img:not([data-hover]) {
+  display: none;
+} 
+
+.cateproduct:hover {
+  transform: scale(1.05); /* Scales up the product container */
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+}
+
+.cateprodDetails {
+  flex-grow: 1; 
+}
+
+.cateprodAddToCart {
+  margin-top: 0.625rem; /* 10px */
+  align-self: center; 
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  cursor: pointer;
+  border-radius: 0.3125rem; /* 5px */
+  transition: background-color 0.3s; /* Added transition for smoother hover effect */
+}
+
+.cateprodAddToCart:hover {
+  background-color: #555; 
+}
+
+.cateproduct img {
+  padding-left: 1.5625rem; /* 25px */
+  width: 15.625rem; /* 250px */
+  height: 15.625rem; /* 250px */
+  object-fit: contain;
+  border-radius: 0.625rem; /* 10px */
+}
+
+.cateprodTitle {
+  font-size: 1rem; /* 16px */
+  margin: 0.625rem 0; /* 10px 0 */
+}
+
+.cateprodBrand {
+  color: #777;
+}
+
+.cateprodRating, body.dark-mode .cateprodRating{
+  color: #FFD700 !important;
+}
+
+.cateprodPrice {
+  font-weight: bold;
+  margin: 0.625rem 0; /* 10px 0 */
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.625rem 0.9375rem; /* 10px 15px */
+  border-radius: 0.3125rem; /* 5px */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.selectContainer {
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.product-checkbox {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.myCartButton {
+  bottom: 50px; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000; 
+}
+
+.addToCartButton{
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #333;
+}
+
+
+
+/************************** Dark theme Category Page **************************/
+
+body.dark-mode .cateproduct {
+    border-color: #333;
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .cateprodAddToCart,
+body.dark-mode .sort-dropdown select,
+body.dark-mode button {
+    background-color: #555;
+    color: white;
+    border: none;
+}
+
+body.dark-mode .cateprodAvailability{
+  color: #4ecca3 !important;
+}
+
+/* Dropdown */
+body.dark-mode .sort-dropdown label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .cateprodBrand {
+    color: #bbb;
+}
+
+body.dark-mode .cateprodAvailability {
+    color: #999;
+}
+
+body.dark-mode #sort {
+    border: 1px solid #444;
+    background-color: #333;
+    color: #e0e0e0;
+}
+/**************************** Styling Cart Page ****************************/
+
+.container {
+  width: 70%;
+  margin: 1.25rem auto; /* 20px */
+}
+
+.cart {
+  margin: 1.25rem 0; /* 20px */
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9375rem; /* 15px */
+  position: relative;
+  padding-right: 6.25rem; /* 100px */
+}
+
+input[disabled] {
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: not-allowed;
+}
+
+button {
+  transition: background-color 0.3s;
+}
+
+.productCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d3b8a5;
+  padding: 0.625rem 0; /* 10px 0 */
+}
+
+.ImgCart {
+  width: 9.375rem; /* 150px */
+  height: 9.375rem; /* 150px */
+  background-color: #ddd;
+  border-radius: 0.3125rem; /* 5px */
+}
+
+.product-info {
+  flex: 1;
+  margin-left: 0.9375rem; /* 15px */
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.qty-btn {
+  background-color: #333;
+  border: none;
+  padding: 0.3125rem 0.625rem; /* 5px 10px */
+  cursor: pointer;
+  border-radius: 0.3125rem; /* 5px */
+  margin: 0 0.3125rem; /* 0 5px */
+}
+
+.remove-btn {
+  background-color: #333;
+  border: none;
+  padding: 0.3125rem 0.625rem; /* 5px 10px */
+  cursor: pointer;
+  border-radius: 0.3125rem; /* 5px */
+}
+
+.cart-controls {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.625rem; /* 10px */
+}
+
+.empty-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.625rem 0.9375rem; /* 10px 15px */
+  cursor: pointer;
+  border-radius: 0.3125rem; /* 5px */
+  margin-top: 0.9375rem; /* 15px */
+}
+
+.Message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 6.25rem); /* Subtract header and footer height */
+  background-color: white;
+}
+
+.thank-you-message {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 2.5rem; /* 40px */
+  border-radius: 0.625rem; /* 10px */
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-message h1 {
+  font-size: 2.25rem; /* 36px */
+  color: #5b2d3e;
+}
+
+.thank-you-message p {
+  font-size: 1.125rem; /* 18px */
+  margin: 1.25rem 0; /* 20px 0 */
+}
+
+/**************************** Dark Theme for Cart Page ****************************/
+ 
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode .cart-header {
+  color: #f5f5f5;
+}
+
+body.dark-mode input[disabled] {
+  background-color: #333;
+  color: #bbb;
+}
+
+body.dark-mode button,
+body.dark-mode .qty-btn,
+body.dark-mode .remove-btn,
+body.dark-mode .empty-btn {
+  background-color: #444;
+  color: #f5f5f5;
+}
+
+body.dark-mode .productCart {
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .ImgCart {
+  background-color: #555;
+}
+
+body.dark-mode .thank-you-message {
+  background-color: #2a2a2a;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .thank-you-message h1 {
+  color: #e8a2a8;
+}
+
+body.dark-mode .thank-you-message p {
+  color: #ddd;
+}

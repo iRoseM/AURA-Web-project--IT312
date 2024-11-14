@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Aura - Add Product</title>
+</head>
+
+<body class="main-body"> 
+
+   <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo"> 
+          <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
+      </div>
+      
+        <nav>
+          <ul>
+            <li><a href="Homepage.html" accesskey="h">Home</a></li>
+            <li><a href="Skincare.html" accesskey="s">Skin Care</a></li>
+            <li><a href="MakeUp.html" accesskey="m">Makeup</a></li>
+            <li><a href="HairTools.html" accesskey="t">Hair Tools</a></li>
+            <li><a href="sellerPage.html" accesskey="l">Seller</a></li>
+          </ul>
+        </nav>
+        <div class="user-cart">
+            <a href="UserPage.html" accesskey="u"><img src="homepage-images/user.png" alt="user page" id="userticon"></a>
+            <a href="CartPage.html" accesskey="c"><img src="homepage-images/cart.png" alt="cart page" id="carticon"></a>
+            <input type="image" src="homepage-images/darktheme.png" alt="darktheme" width="33rem" id="themeSelect">
+        </div>
+    </div>
+
+
+<!-- Breadcrumb -->
+    <ul class="breadcrumb">
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="sellerPage.html">Seller</a></li>
+        <li id="CurrentPage"><a href="AddProduct.html">Add Product</a></li>
+    </ul>
+
+    <header id="titleHeader">ADD PRODUCT</header>
+
+    <div class="container">
+        <div class="formBox"> 
+            <h2 class="formTitle">Product Information</h2> 
+            <form action="#" method="post" class="add-product-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <div class="photo">
+                    <label for="prodImageUpload">Upload Product Image:</label>
+                    <input type="file" id="prodImageUpload" name="prodImageUpload" accept="image/*">
+                </div>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" class="category-select">
+                    <option value="skincare">Skincare</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="hair-tools">Hair Tools</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="description">Description:</label>
+                <textarea class="description-textarea" id="description" name="description" required></textarea>
+
+                <div class="form-button-container">
+                    <input type="submit" id="adproduct" value="Add product">
+                </div>
+            </form>
+        </div>
+    </div> 
+    
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="contact">
+            <p>Contact Information</p>
+            <p>📞 +996555555555</p>
+            <p>✉️ Aura@gmail.com</p>
+            <div class="social-media">
+                <a href="https://www.snapchat.com" target="_blank" title="snapchat" class="fab fa-snapchat"></a>
+                <a href="https://www.instagram.com" target="_blank" title="instagram" class="fab fa-instagram"> </a>
+                <a href="https://www.twitter.com" target="_blank" title="twitter" class="fab fa-twitter"></a>
+            </div>
+        </div>
+        <div id="copyright">
+        <p>&copy; 2024 Aura. All rights reserved</p>
+        </div>
+    </footer>
+    <script src="javaScript.js">
+       
+    </script>
+</body>
+
+</html>
