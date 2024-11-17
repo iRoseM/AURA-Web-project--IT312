@@ -7,9 +7,8 @@
     
     <title>Aura - Order Evaluation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-  
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
 
 <body>
@@ -50,24 +49,18 @@
     <h1 id="titleHeader">PRODUCT EVALUATION</h1>
     
   <!-- Select order number -->
-    <form action="#" method="post">
-    
-         <div id="OrderSelect">
-            <label >Select Order: </label><br>
-            <select name="OrderNumber">
-            
-                <option value="34567788899">Order: #34567788899</option>
-                <option value="56799000333">Order: #56799000333</option>
-                <option value="28939999999">Order: #56799000333</option>
-       
-             
-            </select>
-        </div>
-        
-    </form>
+    <div id="OrderSelect">
+        <label>Select Order: </label><br>
+        <select id="orderNumber" name="OrderNumber" required>
+            <option value="">--Select a previous order--</option>
+            <option value="34567788899">Order: #34567788899</option>
+            <option value="56799000333">Order: #56799000333</option>
+            <option value="28939999999">Order: #28939999999</option>
+        </select>
+    </div>
 
 <div id="Evaluatation">
-        <!-- Order Evaluation  -->
+        <!-- Order Evaluation 1 -->
     <div class="orderEvaluation">
 
         <!--Product image and name -->
@@ -80,26 +73,32 @@
             <div class="product-details">
                  <span class="brand-name">Brand name: Nue</span>
                  <span class="qty">Qty:1</span>
-                 <span class="rate">Rate Product:</span><span class="stars">&#8902; &#8902; &#8902; &#8902; &#8902;</span>
+                 <span class="rate">Rate Product:</span>
+                
+                 <div class="stars" data-product="1">
+                     <i class="fa fa-star" data-value="1"></i>
+                     <i class="fa fa-star" data-value="2"></i>
+                     <i class="fa fa-star" data-value="3"></i>
+                     <i class="fa fa-star" data-value="4"></i>
+                     <i class="fa fa-star" data-value="5"></i>
+                 </div>
             </div>
-    
+
                 <!-- Evaluation Form -->
-            <form action="#" method="post"> 
-                <div class="EvaluateOrder">
-    
-                    <label >Comment:</label>
-                    <br>
-                    <textarea name="Comment" rows="6" cols="40" placeholder="Leave us a comment here!"></textarea>
-                    <br>
-                    <input type="submit" value="Submit">
-    
-                </div>
-             </form>
+            <div class="EvaluateOrder">
+
+                <label>Comment:</label>
+                <br>
+                <textarea name="Comment" rows="6" cols="40" placeholder="Leave us a comment here!"></textarea>
+                <br>
+                <button type="button" class="submitBtn" data-product="1">Submit</button>
+
+            </div>
                     <!--Total price -->  
                  <p class="total">150.00 SAR</p>
     </div>
 
-    <!-- Order Evaluation  -->
+    <!-- Order Evaluation 2 -->
     <div class="orderEvaluation">
 
         <!--Product image and name -->
@@ -112,26 +111,32 @@
             <div class="product-details">
                  <span class="brand-name">Brand name: Nue</span>
                  <span class="qty">Qty:1</span>
-                 <span class="rate">Rate Product:</span><span class="stars">&#8902; &#8902; &#8902; &#8902; &#8902;</span>
+                 <span class="rate">Rate Product:</span>
+                 
+                 <div class="stars" data-product="2">
+                     <i class="fa fa-star" data-value="1"></i>
+                     <i class="fa fa-star" data-value="2"></i>
+                     <i class="fa fa-star" data-value="3"></i>
+                     <i class="fa fa-star" data-value="4"></i>
+                     <i class="fa fa-star" data-value="5"></i>
+                 </div>
             </div>
-    
+
                 <!-- Evaluation Form -->
-            <form  action="#" method="post"> 
-                <div class="EvaluateOrder">
-    
-                    <label >Comment:</label>
-                    <br>
-                    <textarea name="Comment" rows="6" cols="40" placeholder="Leave us a comment here!"></textarea>
-                    <br>
-                    <input type="submit" value="Submit">
-    
-                </div>
-             </form>
+            <div class="EvaluateOrder">
+
+                <label>Comment:</label>
+                <br>
+                <textarea name="Comment" rows="6" cols="40" placeholder="Leave us a comment here!"></textarea>
+                <br>
+                <button type="button" class="submitBtn" data-product="2">Submit</button>
+
+            </div>
                     <!--Total price -->  
                  <p class="total">150.00 SAR</p>
     </div>
 
-    <!-- Order Evaluation  -->
+    <!-- Order Evaluation 3 -->
     <div class="orderEvaluation">
 
         <!--Product image and name -->
@@ -144,28 +149,33 @@
             <div class="product-details">
                  <span class="brand-name">Brand name: Nue</span>
                  <span class="qty">Qty:1</span>
-                 <span class="rate">Rate Product:</span><span class="stars">&#8902; &#8902; &#8902; &#8902; &#8902;</span>
+                 <span class="rate">Rate Product:</span>
+                
+                 <div class="stars" data-product="3">
+                     <i class="fa fa-star" data-value="1"></i>
+                     <i class="fa fa-star" data-value="2"></i>
+                     <i class="fa fa-star" data-value="3"></i>
+                     <i class="fa fa-star" data-value="4"></i>
+                     <i class="fa fa-star" data-value="5"></i>
+                 </div>
             </div>
-    
+
                 <!-- Evaluation Form -->
-            <form  action="#"> 
-                <div class="EvaluateOrder">
-    
-                    <label >Comment:</label>
-                    <br>
-                    <textarea name="Comment" rows="6" cols="40" placeholder="Leave us a comment here!"></textarea>
-                    <br>
-                    <input type="submit" value="Submit">
-    
-                </div>
-             </form>
+            <div class="EvaluateOrder">
+
+                <label>Comment:</label>
+                <br>
+                <textarea name="Comment" rows="6" cols="40" placeholder="Leave us a comment here!"></textarea>
+                <br>
+                <button type="button" class="submitBtn" data-product="3">Submit</button>
+
+            </div>
                     <!--Total price -->  
                  <p class="total">150.00 SAR</p>
         </div>
     </div>
 
-   
-     <!-- Footer Section -->
+    <!-- Footer Section -->
      <footer class="main-footer">
         <div class="contact">
             <p>Contact Information</p>
@@ -181,9 +191,9 @@
         <p>&copy; 2024 Aura. All rights reserved</p>
         </div>
     </footer>
-    <script src="scriptingFile.js">
-
-    </script>
+    
+    <script src="evaluation.js"></script>
+   
 </body>
 
 </html>
