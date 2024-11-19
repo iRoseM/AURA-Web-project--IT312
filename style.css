@@ -27,7 +27,7 @@ body.dark-mode button:hover {
 
 
 /* For medium screens, like smaller laptops */
-@media (max-width: 1200px) {
+ @media (max-width: 1200px) {
   body {
       font-size: 14px;
   }
@@ -35,6 +35,13 @@ body.dark-mode button:hover {
     margin: 0;
   }
   /* Adjust any other specific elements here */
+
+
+    /* Responsive Evaluation page */
+    #OrderSelect select {
+      margin-right: 150em;
+ 
+     }
 }
 
 /* For smaller laptops and tablets */
@@ -44,6 +51,149 @@ body.dark-mode button:hover {
       margin: 0;
   }
 }
+
+
+
+@media (max-width:600px){
+
+  h1#titleHeader{
+    font-size: 2em;
+  }
+   /* Responsive HomePage */
+  .navbar nav ul {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    flex-direction: column;
+    background-color: #d3cbc2;
+   
+    overflow: hidden;
+ 
+   }
+   #logo-image {
+    
+   max-height: 1.6em;
+
+  
+   }
+   img.menu-icon{
+    display: block;
+    min-width: 2em;
+    position: relative;
+    left: 5em;
+
+  }
+  .user-cart img {
+    max-width: 1.5em;
+    position: relative;
+    left: 2.4em;
+  
+  }
+  #themeSelect{
+    width: 1.9em;
+    position: relative;
+    left: 2.7em;
+  
+  }
+
+ 
+  .banner .banner-image{
+    width: 50em;
+  }
+
+
+
+  div.homecategory-item {
+    align-self: center;
+    flex: 0 0 55vw;
+   
+  }
+
+    /* Responsive Evaluation page */
+    #OrderSelect select {
+     max-width: 25em;
+     position: relative;
+     right: 6em;
+
+    }
+    .orderEvaluation {
+      min-width: 0.1em;
+      max-width: 23em;
+      position: relative;
+      right: 15em;
+    }
+
+    .ProductImage {
+      min-width: 12em;
+      max-height: 8em;
+      position: relative;
+      bottom: 2em;
+      left: 4em;
+     
+    }
+
+    textarea {
+      max-width: 9em;
+      min-height: 0.1em;
+      max-height: 1.9em;
+      position: relative;
+      right: 22em;
+      top:  5em;
+    
+    }
+
+    button.submitBtn {
+
+    font-size: 1em;
+     position: relative;
+     max-height: 2em;
+     right: 13em;
+     top: 3em;
+    }
+
+    .brand-name, .qty, .rate {
+      text-align: left; /* Ensure consistent alignment */
+      font-weight: 500;
+      font-size: 0.3em;
+    }
+    
+    .brand-name, .qty {
+    position: relative;
+    top: 1em; 
+    left: 3em;
+    right: 66em;
+    }
+    /* Responsive category page  */
+ 
+    .cateproduct {
+      min-height: 44em;
+    }
+
+    /* Responsive user page */
+
+    .profile {
+    max-width: 27em;
+   
+    }
+    .profile-details {
+    position: relative;
+    bottom: 7em;
+    }
+
+
+    .links {
+     
+      max-width:  20em; 
+     
+    }
+   
+}
+
+
+
+
 
 
 /***************************** Navigation bar ****************************/
@@ -68,7 +218,7 @@ body.dark-mode button:hover {
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: 0.625em 1.25em;
+  padding: 0em 1.25em;
   color: #685852;
   font-size: 1.125em;
   font-weight: bolder;
@@ -105,6 +255,7 @@ body.dark-mode button:hover {
   transition: transform 0.3s ease-in-out;
 }
 
+
 /* Hover effect for icons */
 #userticon:hover, #carticon:hover, #themeSelect:hover {
   transform: scale(1.1);
@@ -112,6 +263,10 @@ body.dark-mode button:hover {
 
 .navbar.dark-mode {
   background-color: #252525;
+}
+
+.menu-icon{
+  display: none;
 }
 
 /***************************** Footer ****************************/
@@ -1384,19 +1539,19 @@ body.dark-mode .OrderedProduct {
 #OrderSelect label {
   font-weight: bold;
   position: relative;
-  left: 13.75em; 
-  top: 0.625em; 
+  left: 13.75em; /* 220px */
+  top: 0.625em; /* 10px */
 }
 
 /* Styling the order number drop menu */
 #OrderSelect select {
-  width: 90em; 
-  padding: 1em 1.25em; 
+  width: 90em; /* 1000px */
+  padding: 1em 1.25em; /* 16px 20px */
   border: none;
-  border-radius: 0.25em; 
-  margin-left: 11.5em; 
-  margin-top: 1.25em; 
-  margin-bottom: 0.0625em; 
+  border-radius: 0.25em; /* 4px */
+  margin-left: 11.5em; /* 200px */
+  margin-top: 1.25em; /* 20px */
+  margin-bottom: 0.0625em; /* 1px */
   background-color: #f1f1f1;
 }
 
@@ -1408,12 +1563,12 @@ body.dark-mode .OrderedProduct {
 
 /* Styling the order evaluation section */
 .orderEvaluation {
-  border: 0.125em solid black; 
-  border-radius: 0.4375em; 
-  width: 62.5em; 
-  padding: 3.75em; 
-  height: 17.5em; 
-  margin-bottom: 0.625em;
+  border: 0.125em solid black; /* 2px */
+  border-radius: 0.4375em; /* 7px */
+  width: 62.5em; /* 1000px */
+  padding: 3.75em; /* 60px */
+  height: 17.5em; /* 280px */
+  margin-bottom: 0.625em; /* 10px */
 }
 
 /* Styling product image and name */
@@ -1424,20 +1579,20 @@ body.dark-mode .OrderedProduct {
 /* Styling product name */
 .product-name {
   align-self: flex-start;
-  border: 1px; 
+  border: 1px; /* This property might not need a unit */
   border-bottom-style: solid;
-  width: 187.5em; 
+  width: 187.5em; /* 3000px */
   text-align: center;
-  margin-left: 18.75em; 
-  font-size: 1.25em; 
+  margin-left: 18.75em; /* 300px */
+  font-size: 1.25em; /* 20px */
   font-weight: bold;
 }
 
 /* Styling product image */
 .ProductImage {
-  border-radius: 0.625em; 
-  width: 15.625em; 
-  height: 15.625em; 
+  border-radius: 0.625em; /* 10px */
+  width: 15.625em; /* 250px */
+  height: 15.625em; /* 250px */
   box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.2), 0 0.1875em 0.625em rgba(0, 0, 0, 0.19);
 }
 
@@ -1445,50 +1600,98 @@ body.dark-mode .OrderedProduct {
 .product-details {
   display: flex;
   justify-content: center;
-  margin-left: 31.875em; 
+  margin-left: 31.875em; /* 510px */
 }
 
 /* Styling brand name and quantity */
 .brand-name, .qty {
-  padding-right: 3.9375em; 
+  padding-right: 3.9375em; /* 63px */
   position: relative;
-  margin-right: 0.3125em; 
-  bottom: 11.875em; 
-  right: 0.0625em;
+  margin-right: 0.3125em; /* 5px */
+  bottom: 11.875em; /* 190px */
+  right: 0.0625em; /* 1px */
 }
 
 /* Styling brand name, quantity, and rate product */
 .brand-name, .qty, .rate {
-  text-align: left;
+  text-align: left; /* Ensure consistent alignment */
+  font-weight: 600;
+  font-size: 0.9em;
 }
+
 
 /* Styling rate product */
 .rate {
+  display: inline;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.8em;
   position: relative;
-  bottom: 9.375em; 
-  right: 18.75em; 
+  bottom: 12em;
+  right: 22em;
+
 }
 
 /* Styling stars */
 .stars {
-  color: #FFD700;
+  color: #e0e0e0; 
+  font-size: 15px;
+  cursor: pointer;
   position: relative;
-  bottom: 9.5625em; 
-  right: 18em; 
+  bottom: 140px; 
+  right: 7px; /* 288px */
+
+ 
+}
+
+.stars .fa-star.selected {
+  color: #FFD700; 
 }
 
 /* Styling the evaluation form */
 .EvaluateOrder {
   position: relative;
-  left: 32.5em;
-  bottom: 8.125em;
+  left: 32.5em; /* 520px */
+  bottom: 8.125em; /* 130px */
 }
+
 
 /* Styling the label in the form */
 .EvaluateOrder label {
   text-align: left;
   position: relative;
-  bottom: 0.625em; 
+  font-weight: bold;
+  bottom: 0.625em; /* 10px */
+  font-size: 0.9em;
+}
+
+
+/* Styling the text area and submit button */
+textarea {
+  width: 50%;
+  height: 4em;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  position: relative;
+
+}
+
+button.submitBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 13px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+ bottom: 0.5em;
+}
+
+button.submitBtn:hover {
+  background-color: #555;
 }
 
 /* Style the total price */
@@ -1496,8 +1699,9 @@ body.dark-mode .OrderedProduct {
   font-weight: bold;
   text-align: right;
   position: relative;
-  bottom: 11.25em; 
+  bottom: 11.25em; /* 180px */
 }
+
 
 /**************************** Product Evaluation Page Dark Mode ****************************/
 
@@ -1706,7 +1910,7 @@ body.dark-mode .total {
   text-align: center;
   margin: 1.25rem; /* 20px */
   width: 18.75rem; /* 300px */
-  height: 31.25rem; /* 500px */
+  height: 34em; /* 500px */
   box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

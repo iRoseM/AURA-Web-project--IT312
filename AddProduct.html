@@ -12,27 +12,46 @@
 
 <body class="main-body"> 
 
-   <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="logo"> 
-          <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
-      </div>
-      
-        <nav>
-          <ul>
-            <li><a href="Homepage.html" accesskey="h">Home</a></li>
-            <li><a href="Skincare.html" accesskey="s">Skin Care</a></li>
-            <li><a href="MakeUp.html" accesskey="m">Makeup</a></li>
-            <li><a href="HairTools.html" accesskey="t">Hair Tools</a></li>
-            <li><a href="sellerPage.html" accesskey="l">Seller</a></li>
-          </ul>
-        </nav>
-        <div class="user-cart">
-            <a href="UserPage.html" accesskey="u"><img src="homepage-images/user.png" alt="user page" id="userticon"></a>
-            <a href="CartPage.html" accesskey="c"><img src="homepage-images/cart.png" alt="cart page" id="carticon"></a>
-            <input type="image" src="homepage-images/darktheme.png" alt="darktheme" width="33rem" id="themeSelect">
-        </div>
+  <!-- Navigation Bar -->
+
+  <div class="navbar">
+    <div class="logo"> 
+      <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
+  </div>
+  
+    <nav>
+      <ul id="menuList">
+        <li><a href="Homepage.html" accesskey="h">Home</a></li>
+        <li><a href="Skincare.html" accesskey="s">Skin Care</a></li>
+        <li><a href="MakeUp.html" accesskey="m">Makeup</a></li>
+        <li><a href="HairTools.html" accesskey="t">Hair Tools</a></li>
+        <li><a href="sellerPage.html" accesskey="l">Seller</a></li>
+      </ul>
+    </nav>
+    <div class="user-cart">
+        <a href="UserPage.html" accesskey="u"><img src="homepage-images/user.png" alt="user page" id="userticon"></a>
+        <a href="CartPage.html" accesskey="c"><img src="homepage-images/cart.png" alt="cart page" id="carticon"></a>
+        <input type="image" src="homepage-images/darktheme.png" alt="darktheme" width="33rem" id="themeSelect">
+        <img src="homepage-images/menu.png" alt="menu" onclick="toggleMenu()"  class="menu-icon" >
+
     </div>
+     
+</div>
+<script>
+
+    let menuList = document.getElementById("menuList")
+    menuList.style.maxHeight = "0px";
+    
+    function toggleMenu(){
+        if(menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "300px";
+        }
+        else{
+            menuList.style.maxHeight = "0px";
+        }
+    }
+</script>
 
 
 <!-- Breadcrumb -->
