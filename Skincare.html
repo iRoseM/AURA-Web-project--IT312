@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    
     <title>Aura - Skin Care</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
+   <!-- Navigation Bar -->
 
-  <div class="navbar">
+   <div class="navbar">
     <div class="logo"> 
       <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
   </div>
@@ -58,25 +58,26 @@
 
    <h1 id="titleHeader">SKIN CARE</h1>
      
-    <div class="sort-dropdown">
-        <label for="sort">Sort: </label>
-        <select id="sort" name="Sort" onchange="sortProducts()">
-           <optgroup label="Price">
-            <option value="low-high">Price: Low - High </option>
-            <option value="high-low">Price: High - Low </option>
-           </optgroup>
-        </select>
-    </div>
+   <div class="sort-dropdown">
+    <label for="sort">Sort: </label>
+    <select id="sort" name="Sort" onchange="sortProducts()">
+        <optgroup label="Price">
+            <option value="low-high">Price: Low - High</option>
+            <option value="high-low">Price: High - Low</option>
+        </optgroup>
+    </select>
+</div>
 
-    <div class="catehorizProducts">
+    <div class="catehorizProducts" id="product-list">
+        <div class="catehorizProducts">
         <!-- Product 1 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/BodyScrub.jpg" alt="Frangipani Monoi Salt Glow - Body Scrub">
-            <img class="cateprodPic" src="images/BodyScrubhov.jpg" alt="Waver" data-hover="images/BodyScrub.jpg">
+        <div class="cateproduct" id ="product1">
+            
+            <img class="cateprodPic" src="images/BodyScrub.avif" alt="Blush">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Frangipani Monoi Salt Glow - Body Scrub</h3>
                 <p class="cateprodBrand">ELEMIS</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">25.00 SAR</p>
                 <p class="prodAvailability">In Stock</p>
                 <div class="quantity-control">
@@ -88,165 +89,169 @@
             </div>
         </div>
         <!-- Product 2 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/toner.jpg" alt="Watermelon Glow PHA + BHA Pore-Tight Toner">
-            <img class="cateprodPic" src="images/tonerhov.jpg" alt="Watermelon Glow PHA + BHA Pore-Tight Toner" data-hover="images/toner.jpg">
+        <div class="cateproduct" id ="product2">
+           
+            <img class="cateprodPic" src="images/Toner.avif" alt="Martine Cosmetics">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Watermelon Glow PHA + BHA Pore-Tight Toner</h3>
                 <p class="cateprodBrand">GLOW RECIPE</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">45.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product2', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product2">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product2', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+                <button class="cateprodAddToCart" onclick="addToCart('product2')">Add to Cart</button>
             </div>
         </div>
         <!-- Product 3 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/GlowScreen.jpg" alt="Glowscreen Sunscreen SPF 30 with Hyaluronic Acid + Niacinamide" width="200" height="200">
-            <img class="cateprodPic" src="images/GlowScreenhov.jpg" alt="Glowscreen Sunscreen SPF 30 with Hyaluronic Acid + Niacinamide" data-hover="images/GlowScreen.jpg">
+        <div class="cateproduct" id ="product3">
+            
+            <img class="cateprodPic" src="images/GlowScreen.avif" alt="Lip Balm" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Glowscreen Sunscreen SPF 30 with Hyaluronic Acid + Niacinamide</h3>
                 <p class="cateprodBrand">SUPERGOOP</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">50.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product3', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product3">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product3', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+                <button class="cateprodAddToCart" onclick="addToCart('product3')">Add to Cart</button>
             </div>
             
         </div>
-    </div>
+        </div>
+   
         <!-- Product 4 -->
-    <div class="catehorizProducts">
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/LashSerum.jpg" alt="Lashbond™️ Lash Building Serum" width="200" height="200">
-            <img class="cateprodPic" src="images/LashSerumhov.jpg" alt="Lashbond™️ Lash Building Serum" data-hover="images/LashSerum.jpg">
+        <div class="catehorizProducts">
+
+
+        <div class="cateproduct" id ="product4">
+            
+            <img class="cateprodPic" src="images/LashSerum.jpg" alt="Lash Mascara" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Lashbond™️ Lash Building Serum</h3>
                 <p class="cateprodBrand">OLAPLEX</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">70.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product4', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product4">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product4', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
-                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product4')">Add to Cart</button>
+            </div>
         </div>
 
         <!-- Product 5 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/Hyaluronic.jpg" alt="Hyaluronic Marine Hydration Booster" width="200" height="200">
-            <img class="cateprodPic" src="images/Hyaluronichov.jpg" alt="Hyaluronic Marine Hydration Booster" data-hover="images/Hyaluronic.jpg">
+        <div class="cateproduct" id ="product5">
+            
+            <img class="cateprodPic" src="images/Hyaluronic.avif" alt="Skin Tint" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Hyaluronic Marine Hydration Booster</h3>
                 <p class="cateprodBrand">DR DENNIS GROSS</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">40.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product5', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product5">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product5', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+                <button class="cateprodAddToCart" onclick="addToCart('product5')">Add to Cart</button>
             </div>
         
         </div>
 
         <!-- Product 6 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/LANEIGE.jpg" alt="Lip Glowy Balm" width="200" height="200">
-            <img class="cateprodPic" src="images/LANEIGEhov.jpg" alt="Lip Glowy Balm" data-hover="images/LANEIGE.jpg">
+        <div class="cateproduct" id ="product6">
+            <img class="cateprodPic" src="images/LANEIGE.jpg" alt="Concealer" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Lip Glowy Balm</h3>
                 <p class="cateprodBrand"> LANEIGE</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">85.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product6', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product6">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product6', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+                <button class="cateprodAddToCart" onclick="addToCart('product6')">Add to Cart</button>
             </div>
             
         </div>
-    </div>
-    <div class="catehorizProducts">
+        </div>
+        <div class="catehorizProducts">
         <!-- Product 7 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/cream.jpg" alt="Find Comfort Body Lotion" width="200" height="200">
-            <img class="cateprodPic" src="images/creamhov.jpg" alt="Find Comfort Body Lotion" data-hover="images/cream.jpg">
+        <div class="cateproduct" id ="product7">
+          
+            <img class="cateprodPic" src="images/cream.avif" alt="Highlight" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Find Comfort Body Lotion</h3>
                 <p class="cateprodBrand">RARE BEAUTY</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">65.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product7', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product7">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product7', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+                <button class="cateprodAddToCart" onclick="addToCart('product7')">Add to Cart</button>
             </div>
         </div>
         
         <!-- Product 8 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/ESTEE.jpg" alt="Advanced Night Repair - Synchronized Multi-Recovery Complex" width="200" height="200">
-            <img class="cateprodPic" src="images/ESTEEhov.jpg" alt="Advanced Night Repair - Synchronized Multi-Recovery Complex" data-hover="images/ESTEE.jpg">
+        <div class="cateproduct" id ="product8">
+            
+            <img class="cateprodPic" src="images/ESTEE.avif" alt="Bronzer" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Advanced Night Repair - Synchronized Multi-Recovery Complex</h3>
                 <p class="cateprodBrand">ESTEE LAUDER</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">100.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product8', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product8">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product8', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+                <button class="cateprodAddToCart" onclick="addToCart('product8')">Add to Cart</button>
             </div>
            
             
         </div>
 
         <!-- Product 9 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/Exfoliator.jpg" alt="Daily Microfoliant Exfoliator" width="200" height="200">
-            <img class="cateprodPic" src="images/Exfoliatorhov.jpg" alt="Daily Microfoliant Exfoliator" data-hover="images/Exfoliator.jpg">
+        <div class="cateproduct" id ="product9">
+           
+            <img class="cateprodPic" src="images/Exfoliator.avif" alt="Brow Stain" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Daily Microfoliant Exfoliator</h3>
                 <p class="cateprodBrand">DERMALOGICA</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">35.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
                 <div class="quantity-control">
-                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
-                    <span class="quantity" id="quantity-product1">1</span>
-                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                    <button class="minus-btn" onclick="updateQuantity('product9', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product9">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product9', 'increment')">+</button>
                 </div>
-                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+                <button class="cateprodAddToCart" onclick="addToCart('product9')">Add to Cart</button>
             </div>
         </div> 
+        </div>
     </div>
 
-  
+    
+    
     <!-- Footer Section -->
     <footer class="main-footer">
         <div class="contact">
@@ -263,104 +268,9 @@
         <p>&copy; 2024 Aura. All rights reserved</p>
         </div>
     </footer>
-    <script src="scriptingFile.js">
-
+    <script src="CartAndCategory.js">
+       
     </script>
-      <script>
-        // Define the sorting function
-        function sortProducts() {
-            const sortOption = document.getElementById("sort").value;
-            const productList = document.getElementById("product-list");
-            const products = Array.from(productList.getElementsByClassName("cateproduct"));
     
-            if (!products.length) return;
-    
-            // Function to extract price and convert it to a number for sorting
-            const getPrice = (product) => {
-                const priceText = product.querySelector(".cateprodPrice").innerText;
-                return parseFloat(priceText.replace(' SAR', '').trim());
-            };
-    
-            // Sort products based on the selected option
-            if (sortOption === "low-high") {
-                products.sort((a, b) => getPrice(a) - getPrice(b));
-            } else if (sortOption === "high-low") {
-                products.sort((a, b) => getPrice(b) - getPrice(a));
-            }
-    
-            // Reorder the product list based on the sorted array
-            products.forEach(product => {
-                productList.appendChild(product); // Re-append to reorder
-            });
-        }
-    
-        // Listen for the sort dropdown change event
-        document.addEventListener('DOMContentLoaded', function() {
-            const sortElement = document.getElementById("sort");
-            if (sortElement) {
-                sortElement.addEventListener("change", sortProducts);
-            }
-        });
-    
-        // Handle add to cart functionality
-        function addToCart(productId) {
-            const product = document.getElementById(productId);
-            if (!product) return; // Handle case where the product is not found
-    
-            const quantityElement = product.querySelector('.quantity');
-            const quantity = quantityElement ? parseInt(quantityElement.innerText) : 1; // Default to 1 if not found
-    
-            const productName = product.querySelector('.cateprodTitle')?.innerText || "Unknown Product";
-            const productPrice = product.querySelector('.cateprodPrice')?.innerText.replace(' SAR', '').trim() || "0";
-    
-            const cartItem = { name: productName, price: parseFloat(productPrice), quantity: quantity };
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push(cartItem);
-            localStorage.setItem('cart', JSON.stringify(cart));
-    
-            // Optionally show a success notification
-            alert(`${productName} has been added to the cart!`);
-        }
-    
-        // Update product quantity
-        function updateQuantity(productId, operation) {
-            const quantityElement = document.getElementById(`quantity-${productId}`);
-            if (!quantityElement) return; // If quantity element doesn't exist, do nothing
-    
-            let currentQuantity = parseInt(quantityElement.innerText);
-            if (isNaN(currentQuantity)) currentQuantity = 1; // Fallback in case quantity isn't valid
-    
-            if (operation === 'increment') {
-                currentQuantity += 1;
-            } else if (operation === 'decrement' && currentQuantity > 1) {
-                currentQuantity -= 1;
-            }
-    
-            quantityElement.innerText = currentQuantity; // Update the displayed quantity
-        }
-    
-        // Handle cart loading (if applicable)
-        window.onload = function() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const cartItemsContainer = document.getElementById('cart-items');
-            
-            if (!cartItemsContainer) return; // If the container doesn't exist, do nothing
-    
-            if (cart.length === 0) {
-                cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
-                return;
-            }
-    
-            cart.forEach(item => {
-                const cartItemDiv = document.createElement('div');
-                cartItemDiv.innerHTML = `
-                    <h3>${item.name}</h3>
-                    <p>Price: ${item.price} SAR</p>
-                    <p>Quantity: ${item.quantity}</p>
-                `;
-                cartItemsContainer.appendChild(cartItemDiv);
-            });
-        };
-    </script>
 </body>
 </html>

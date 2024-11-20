@@ -7,49 +7,52 @@
     <title>Aura - Makeup</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+      
+   
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
 
-  <div class="navbar">
-    <div class="logo"> 
-      <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
-  </div>
-  
-    <nav>
-      <ul id="menuList">
-        <li><a href="Homepage.html" accesskey="h">Home</a></li>
-        <li><a href="Skincare.html" accesskey="s">Skin Care</a></li>
-        <li><a href="MakeUp.html" accesskey="m">Makeup</a></li>
-        <li><a href="HairTools.html" accesskey="t">Hair Tools</a></li>
-        <li><a href="sellerPage.html" accesskey="l">Seller</a></li>
-      </ul>
-    </nav>
-    <div class="user-cart">
-        <a href="UserPage.html" accesskey="u"><img src="homepage-images/user.png" alt="user page" id="userticon"></a>
-        <a href="CartPage.html" accesskey="c"><img src="homepage-images/cart.png" alt="cart page" id="carticon"></a>
-        <input type="image" src="homepage-images/darktheme.png" alt="darktheme" width="33rem" id="themeSelect">
-        <img src="homepage-images/menu.png" alt="menu" onclick="toggleMenu()"  class="menu-icon" >
+    <div class="navbar">
+        <div class="logo"> 
+          <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
+      </div>
+      
+        <nav>
+          <ul id="menuList">
+            <li><a href="Homepage.html" accesskey="h">Home</a></li>
+            <li><a href="Skincare.html" accesskey="s">Skin Care</a></li>
+            <li><a href="MakeUp.html" accesskey="m">Makeup</a></li>
+            <li><a href="HairTools.html" accesskey="t">Hair Tools</a></li>
+            <li><a href="sellerPage.html" accesskey="l">Seller</a></li>
+          </ul>
+        </nav>
+        <div class="user-cart">
+            <a href="UserPage.html" accesskey="u"><img src="homepage-images/user.png" alt="user page" id="userticon"></a>
+            <a href="CartPage.html" accesskey="c"><img src="homepage-images/cart.png" alt="cart page" id="carticon"></a>
+            <input type="image" src="homepage-images/darktheme.png" alt="darktheme" width="33rem" id="themeSelect">
+            <img src="homepage-images/menu.png" alt="menu" onclick="toggleMenu()"  class="menu-icon" >
 
+        </div>
+         
     </div>
-     
-</div>
-<script>
+    <script>
 
-    let menuList = document.getElementById("menuList")
-    menuList.style.maxHeight = "0px";
-    
-    function toggleMenu(){
-        if(menuList.style.maxHeight == "0px")
-        {
-            menuList.style.maxHeight = "300px";
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+        
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
         }
-        else{
-            menuList.style.maxHeight = "0px";
-        }
-    }
-</script>
+    </script>
 
 
     <ul class="breadcrumb">
@@ -59,154 +62,198 @@
 
  <h1 id="titleHeader">MAKEUP</h1>
 
-    <div class="sort-dropdown">
-        <label for="sort">Sort: </label>
-        <select id="sort" name="Sort">
-            <optgroup label="Price" >
-                <option value="low-high">Price: Low - High </option>
-                <option value="high-low">Price: High - Low </option>
-            </optgroup>
-        </select>
-    </div>
+ <div class="sort-dropdown">
+    <label for="sort">Sort: </label>
+    <select id="sort" name="Sort" onchange="sortProducts()">
+        <optgroup label="Price">
+            <option value="low-high">Price: Low - High</option>
+            <option value="high-low">Price: High - Low</option>
+        </optgroup>
+    </select>
+</div>
      
+<div class="catehorizProducts" id="product-list">
     <div class="catehorizProducts">
-        <!-- Product 1 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/blush2.jpg" alt="Pretty Fly Cream Blush">
-            <img class="cateprodPic" src="images/blush2hov.jpg" alt="Pretty Fly Cream Blush" data-hover="images/blush2.jpg">
-            <div class="cateprodDetails">
-                <h2 class="cateprodTitle">Pretty Fly Cream Blush</h2>
-                <p class="cateprodBrand">Doll Beauty</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                <p class="cateprodPrice">25.00 SAR</p>
-                <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+
+    <!-- Example Products (Repeat similar structure for all products) -->
+    <div class="cateproduct" id ="product1">
+        <img class="cateprodPic" src="images/DOBE0198F_1.jpg" alt="Blush">
+        <div class="cateprodDetails">
+            <h2 class="cateprodTitle">Blush</h2>
+            <p class="cateprodBrand">Doll Beauty</p>
+            <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
+            <p class="cateprodPrice">25.00 SAR</p>
+            <p class="cateprodAvailability">In Stock</p>
+            <div class="quantity-control">
+                <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
+                <span class="quantity" id="quantity-product1">1</span>
+                <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
             </div>
+            <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
         </div>
+    </div>
          <!-- Product 2 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/eyeshadow.jpg" alt="Eyeshadow Petite Tchoin - Martine Cosmetics">
-            <img class="cateprodPic" src="images/eyeshadowhov.jpg" alt="Eyeshadow Petite Tchoin - Martine Cosmetics" data-hover="images/eyeshadow.jpg">
+         <div class="cateproduct" id ="product2">
+            <img class="cateprodPic" src="images/MART0216F_1.jpg" alt="Martine Cosmetics">
             <div class="cateprodDetails">
-                <h2 class="cateprodTitle">Eyeshadow Petite Tchoin</h2>
+                <h2 class="cateprodTitle">Eyeshadow</h2>
                 <p class="cateprodBrand">Martine Cosmetics</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">45.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product2', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product2">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product2', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product2')">Add to Cart</button>
             </div>
+            
         </div>
         <!-- Product 3 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/gloss.jpg" alt="Gloss Bomb" width="200" height="200">
-            <img class="cateprodPic" src="images/glosshov.jpg" alt="Gloss Bomb" data-hover="images/gloss.jpg">
-            <div class="cateprodDetails">
+        <div class="cateproduct" id ="product3">
+            <img class="cateprodPic" src="images/fenty.avif" alt="Lip Balm" width="200" height="200">
+            <div class="cateprodDetails"> 
                 <h2 class="cateprodTitle">Gloss Bomb</h2>
                 <p class="cateprodBrand">FENTY BEAUTY</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">20.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
-            </div>   
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product3', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product3">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product3', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product3')">Add to Cart</button>
+            </div>
         </div>
-    </div>
+   </div>
     <div class="catehorizProducts">
         <!-- Product 4 -->
-        <div class="cateproduct">
+        <div class="cateproduct" id ="product4">
             <img class="cateprodPic" src="images/mascara.jpg" alt="Lash Mascara" width="200" height="200">
-            <img class="cateprodPic" src="images/mascarahov.jpg" alt="Lash Mascara" data-hover="images/mascara.jpg">
-            <div class="cateprodDetails">
+            <div class="cateprodDetails"> 
                 <h2 class="cateprodTitle">Lash Mascara</h2>
                 <p class="cateprodBrand">Makeup Revolution</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">15.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product4', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product4">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product4', 'increment')">+</button>
                 </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product4')">Add to Cart</button>
+            </div>
         </div>
 
         <!-- Product 5 -->
-        <div class="cateproduct">
+        <div class="cateproduct" id ="product5">
             <img class="cateprodPic" src="images/SkinTint.jpg" alt="Skin Tint" width="200" height="200">
-            <img class="cateprodPic" src="images/SkinTinthov.jpg" alt="Skin Tint" data-hover="images/SkinTint.jpg">
             <div class="cateprodDetails">
                 <h2 class="cateprodTitle">Skin Tint</h2>
                 <p class="cateprodBrand">Anastasia Beverly Hills</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">25.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product5', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product5">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product5', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product5')">Add to Cart</button>
             </div>
-        
         </div>
 
         <!-- Product 6 -->
-        <div class="cateproduct">
+        <div class="cateproduct" id ="product6">   
+                
             <img class="cateprodPic" src="images/Concealer.jpg" alt="Concealer" width="200" height="200">
-            <img class="cateprodPic" src="images/Concealerhov.jpg" alt="Concealer" data-hover="images/Concealer.jpg">
             <div class="cateprodDetails">
                 <h2 class="cateprodTitle">Concealer</h2>
                 <p class="cateprodBrand">Maybelline</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">18.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
-            </div>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product6', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product6">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product6', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product6')">Add to Cart</button>
+            
+            </div>   
+        </div>
             
         </div>
-    </div>
+    
     <div class="catehorizProducts">
         <!-- Product 7 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/Highlight.jpg" alt="Highlight" width="200" height="200">
-            <img class="cateprodPic" src="images/highlighterhov.jpg" alt="Highlight" data-hover="images/Highlight.jpg">
+        <div class="cateproduct" id ="product7">
+            <img class="cateprodPic" src="images/OFRA0510F_1.jpg" alt="Highlight" width="200" height="200">
             <div class="cateprodDetails">
                 <h2 class="cateprodTitle">Highlight</h2>
                 <p class="cateprodBrand">Ofra</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">12.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
-            </div>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product7', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product7">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product7', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product7')">Add to Cart</button>
+            
+            </div>   
         </div>
 
         <!-- Product 8 -->
-        <div class="cateproduct">
+        <div class="cateproduct" id ="product8">    
             <img class="cateprodPic" src="images/Bronzer.jpg" alt="Bronzer" width="200" height="200">
-            <img class="cateprodPic" src="images/Bronzerhov.jpg" alt="Bronzer" data-hover="images/Bronzer.jpg">
             <div class="cateprodDetails">
                 <h2 class="cateprodTitle">Bronzer</h2>
                 <p class="cateprodBrand">NYX Professional Makeup</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">10.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
-            </div>
-           
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product8', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product8">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product8', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product8')">Add to Cart</button>
             
+            </div>   
         </div>
-
         <!-- Product 9 -->
-        <div class="cateproduct">
+        <div class="cateproduct" id ="product9">  
             <img class="cateprodPic" src="images/BrowStain.jpg" alt="Brow Stain" width="200" height="200">
-            <img class="cateprodPic" src="images/BrowStainhov.jpg" alt="Brow Stain" data-hover="images/BrowStain.jpg">
             <div class="cateprodDetails">
                 <h2 class="cateprodTitle">Brow Stain</h2>
                 <p class="cateprodBrand">WONDERSKIN</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">35.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
-            </div>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product9', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product9">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product9', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product9')">Add to Cart</button>
+            
+            </div>   
         </div>
-    </div> 
-
+        
+    
+    </div>
+</div> 
+    
     <!-- Footer Section -->
     <footer class="main-footer">
         <div class="contact">
             <p>Contact Information</p>
             <p>📞 +996555555555</p>
-            <p>✉️ Aura@gmail.com</p>
+            <p>✉ Aura@gmail.com</p>
             <div class="social-media">
                 <a href="https://www.snapchat.com" target="_blank" title="snapchat" class="fab fa-snapchat"></a>
                 <a href="https://www.instagram.com" target="_blank" title="instagram" class="fab fa-instagram"> </a>
@@ -216,9 +263,8 @@
         <div id="copyright">
         <p>&copy; 2024 Aura. All rights reserved</p>
         </div>
-    </footer>
-    <script src="scriptingFile.js">
+        <script src="CartAndCategory.js">
 
-    </script>
-</body>
+        </script>   
+</body> 
 </html>

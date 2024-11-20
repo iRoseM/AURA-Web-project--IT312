@@ -10,9 +10,9 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+   <!-- Navigation Bar -->
 
-  <div class="navbar">
+   <div class="navbar">
     <div class="logo"> 
       <a href="Homepage.html"><img src="AURAlogo1.png" alt=" logo" id="logo-image"></a>
   </div>
@@ -60,148 +60,201 @@
     
    <h1 id="titleHeader">HAIR TOOLS</h1>
 
-    <div class="sort-dropdown">
-        <label for="sort">Sort: </label>
-        <select id="sort">
-            <optgroup label="Price" >
-                <option value="low-high">Price: Low - High </option>
-                <option value="high-low">Price: High - Low </option>
-            </optgroup>
-        </select>
-    </div>
-
+   <div class="sort-dropdown">
+    <label for="sort">Sort: </label>
+    <select id="sort" name="Sort" onchange="sortProducts()">
+        <optgroup label="Price">
+            <option value="low-high">Price: Low - High</option>
+            <option value="high-low">Price: High - Low</option>
+        </optgroup>
+    </select>
+</div>
+<div class="catehorizProducts" id="product-list">
     <div class="catehorizProducts">
         <!-- Product 1 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/waver2.jpg" alt="Waver">
-            <img class="cateprodPic" src="images/waver2hov.jpg" alt="Waver" data-hover="images/waver2.jpg">
+        <div class="cateproduct" id ="product1">
+            <img class="cateprodPic" src="images/Curler.jpg" alt="Blush">
             <div class="cateprodDetails">
-                <h3 class="cateprodTitle">Flat Iron Wave Bar</h3>
-                <p class="cateprodBrand">Beauty Works</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                <p class="cateprodPrice">299.60 SAR</p>
+                <h3 class="cateprodTitle">Curler</h3>
+                <p class="cateprodBrand">Wylera Hair</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
+                <p class="cateprodPrice">250.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product1', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product1">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product1', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product1')">Add to Cart</button>
+
             </div>
         </div>
         <!-- Product 2 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/Waver.jpg" alt="Waver">
-            <img class="cateprodPic" src="images/Waverhov.jpg" alt="Waver" data-hover="images/Waver.jpg">
+        <div class="cateproduct" id ="product2">
+            <img class="cateprodPic" src="images/Waver.jpg" alt="Martine Cosmetics">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Waver</h3>
                 <p class="cateprodBrand">Mermade Hair</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">450.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product2', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product2">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product2', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product2')">Add to Cart</button>
+
             </div>
         </div>
         <!-- Product 3 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/BlowOut.jpg" alt="Blow Out" width="200" height="200">
-            <img class="cateprodPic" src="images/BlowOuthov.jpg" alt="Blow Out" data-hover="images/BlowOut.jpg">
+        <div class="cateproduct" id ="product3">
+            
+            <img class="cateprodPic" src="images/BlowOut.jpg" alt="Lip Balm" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Blow Out</h3>
                 <p class="cateprodBrand">Beauty Works</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">200.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product3', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product3">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product3', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product3')">Add to Cart</button>
+
             </div>
             
         </div>
     </div>
     <div class="catehorizProducts">
         <!-- Product 4 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/ANSWR.jpg" alt="Volumewave Heater Brush" width="200" height="200">
-            <img class="cateprodPic" src="images/ANSWRhov.jpg" alt="Volumewave Heater Brush" data-hover="images/ANSWR.jpg">
+        <div class="cateproduct" id ="product4">
+          
+            <img class="cateprodPic" src="images/ANSWR.jpg" alt="Lash Mascara" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Volumewave Heater Brush</h3>
                 <p class="cateprodBrand">ANSWR</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">150.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product4', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product4">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product4', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product4')">Add to Cart</button>
+
                 </div>
         </div>
 
         <!-- Product 5 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/Straightener.jpg" alt="Straightener" width="200" height="200">
-            <img class="cateprodPic" src="images/Straightenerhov.jpg" alt="Straightener" data-hover="images/Straightener.jpg">
+        <div class="cateproduct" id ="product5">
+           
+            <img class="cateprodPic" src="images/Straightener.jpg" alt="Skin Tint" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Straightener</h3>
                 <p class="cateprodBrand">BaByliss</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">250.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product5', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product5">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product5', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product5')">Add to Cart</button>
+
             </div>
         
         </div>
 
         <!-- Product 6 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/HairDryer.jpg" alt="Hair Dryer" width="200" height="200">
-            <img class="cateprodPic" src="images/HairDryerhov.jpg" alt="Hair Dryer" data-hover="images/HairDryer.jpg">
+        <div class="cateproduct" id ="product6">
+            
+            <img class="cateprodPic" src="images/HairDryer.jpg" alt="Concealer" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Hair Dryer</h3>
                 <p class="cateprodBrand">Mermade Hair</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">80.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product6', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product6">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product6', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product6')">Add to Cart</button>
+
             </div>  
         </div>
     </div>
 
     <div class="catehorizProducts">
         <!-- Product 7 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/multistyler.jpg" alt="AERIS Multi-Styler" width="200" height="200">
-            <img class="cateprodPic" src="images/multistylerhov.jpg" alt="AERIS Multi-Styler" data-hover="images/multistyler.jpg">
+        <div class="cateproduct" id ="product7">
+          
+            <img class="cateprodPic" src="images/Dyson.jpg" alt="Highlight" width="200" height="200">
             <div class="cateprodDetails">
-                <h3 class="cateprodTitle">AERIS Multi-Styler</h3>
-                <p class="cateprodBrand">Beauty Works</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &star;</p>
-                <p class="cateprodPrice">878.30 SAR</p>
+                <h3 class="cateprodTitle">Airwrap</h3>
+                <p class="cateprodBrand">DYSON</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
+                <p class="cateprodPrice">500.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product7', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product7">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product7', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product7')">Add to Cart</button>
+
             </div>
         </div>
 
         <!-- Product 8 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/diffuser.jpg" alt="Hair diffuser" width="200" height="200">
-            <img class="cateprodPic" src="images/diffuserhov.jpg" alt="Hair diffuser" data-hover="images/diffuser.jpg">
+        <div class="cateproduct" id ="product8">
+            
+            <img class="cateprodPic" src="images/heatbrush.png" alt="Bronzer" width="200" height="200">
             <div class="cateprodDetails">
-                <h3 class="cateprodTitle">Afar Diffuser</h3>
-                <p class="cateprodBrand">T3</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &star;</p>
-                <p class="cateprodPrice">79.90 SAR</p>
+                <h3 class="cateprodTitle">LaBelle Brush Solo</h3>
+                <p class="cateprodBrand">LaBelle</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
+                <p class="cateprodPrice">110.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product8', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product8">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product8', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product8')">Add to Cart</button>
+
             </div>   
         </div>
 
         <!-- Product 9 -->
-        <div class="cateproduct">
-            <img class="cateprodPic" src="images/HairDryer2.jpg" alt="Hair Dryer" width="200" height="200">
-            <img class="cateprodPic" src="images/HairDryer2hov.jpg" alt="Hair Dryer" data-hover="images/HairDryer.jpg">
+        <div class="cateproduct" id ="product9">
+            
+            <img class="cateprodPic" src="images/HairDryer2.jpg" alt="Brow Stain" width="200" height="200">
             <div class="cateprodDetails">
                 <h3 class="cateprodTitle">Hair Dryer</h3>
                 <p class="cateprodBrand">T3</p>
-                <p class="cateprodRating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="cateprodRating">&#8902; &#8902; &#8902; &#8902; &#8902;</p>
                 <p class="cateprodPrice">353.00 SAR</p>
                 <p class="cateprodAvailability">In Stock</p>
-                <button class="cateprodAddToCart">Add to Cart</button>
+                <div class="quantity-control">
+                    <button class="minus-btn" onclick="updateQuantity('product9', 'decrement')">-</button>
+                    <span class="quantity" id="quantity-product9">1</span>
+                    <button class="plus-btn" onclick="updateQuantity('product9', 'increment')">+</button>
+                </div>
+                <button class="cateprodAddToCart" onclick="addToCart('product9')">Add to Cart</button>
+
             </div>
         </div> 
     </div> 
+</div>
 
-
+    
 
     <!-- Footer Section -->
     <footer class="main-footer">
@@ -219,8 +272,8 @@
         <p>&copy; 2024 Aura. All rights reserved</p>
         </div>
     </footer>
-    <script src="scriptingFile.js">
+    <script src="CartAndCategory.js">
 
-    </script>
+    </script>   
 </body>
 </html>
