@@ -41,17 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
       let cartimg = document.getElementById('carticon');
       let userimg = document.getElementById('userticon');
       let selectorimg = document.getElementById('themeSelect');
+      let menuimg= document.getElementsByClassName("menu-icon")[0];
     
       if (document.body.classList.contains("dark-mode")) {
         selectorimg.src = "homepage-images/darktheme-dark.png";
         logoimg.src = "homepage-images/auralogo-dark.png";
         cartimg.src = "homepage-images/cart-dark.png";
         userimg.src = "homepage-images/user-dark.png";
+        menuimg.src = "homepage-images/menu-dark.png"; 
       } else {
         selectorimg.src = "homepage-images/darktheme.png";
         logoimg.src = "AuraLogo1.png";
         cartimg.src = "homepage-images/cart.png";
         userimg.src = "homepage-images/user.png";
+        menuimg.src = "homepage-images/menu.png";
       }
     }
 

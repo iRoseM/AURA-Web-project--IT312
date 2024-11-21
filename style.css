@@ -83,6 +83,7 @@ body.dark-mode button:hover {
     min-width: 2em;
     position: relative;
     left: 5em;
+    width: 1em;
 
   }
   .user-cart img {
@@ -257,7 +258,7 @@ body.dark-mode button:hover {
 
 
 /* Hover effect for icons */
-#userticon:hover, #carticon:hover, #themeSelect:hover {
+#userticon:hover, #carticon:hover, #themeSelect:hover, .menu-icon:hover{
   transform: scale(1.1);
 }
 
