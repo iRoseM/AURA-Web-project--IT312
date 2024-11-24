@@ -195,8 +195,6 @@ body.dark-mode button:hover {
 
 
 
-
-
 /***************************** Navigation bar ****************************/
 .navbar {
   display: flex;
@@ -1540,8 +1538,8 @@ body.dark-mode .OrderedProduct {
 #OrderSelect label {
   font-weight: bold;
   position: relative;
-  left: 13.75em; /* 220px */
-  top: 0.625em; /* 10px */
+  left: 13.75em;
+  top: 0.625em; 
 }
 
 /* Styling the order number drop menu */

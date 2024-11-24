@@ -1,22 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- Display the Current Week's Date ---
   const dateElement = document.createElement('p');
   const today = new Date();
   const firstDayOfWeek = new Date(today.setDate(today.getDate() - today.getDay())); // Sunday as the first day
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
+  
   dateElement.textContent = `Week starts on: ${firstDayOfWeek.toLocaleDateString(undefined, options)}`;
-  dateElement.style.fontSize = "1.2em";
+  dateElement.style.fontSize = "1em";
   dateElement.style.fontWeight = "bold";
   dateElement.style.textAlign = "center"; // Center align the date
-  dateElement.style.margin = "20px 0"; // Add spacing
-
-  // Insert the date above the footer
-  const footer = document.querySelector('.main-footer');
-  if (footer) {
-    footer.before(dateElement);
+  dateElement.style.padding = "20px 0"; // Add spacing
+  dateElement.style.margin = "0px"; // Add spacing
+  dateElement.style.backgroundColor= "#0c0907";
+  dateElement.style.color= "#d2cbc3";
+  
+  // Select the placeholder paragraph by its id
+  const placeholder = document.getElementById('week-start-date');
+  if (placeholder) {
+    placeholder.replaceWith(dateElement); // Replace the placeholder with the new date element
   } else {
-    console.error("Footer element not found.");
+    console.error("Placeholder element not found.");
   }
 
   // --- "Show More Offers" Button Functionality ---
