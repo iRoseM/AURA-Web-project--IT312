@@ -258,7 +258,7 @@ body.dark-mode button:hover {
 
 
 /* Hover effect for icons */
-#userticon:hover, #carticon:hover, #themeSelect:hover, .menu-icon:hover{
+#userticon:hover, #carticon:hover, #themeSelect:hover, .menu-icon{
   transform: scale(1.1);
 }
 
