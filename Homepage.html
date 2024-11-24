@@ -8,12 +8,12 @@
         <title>Aura - Home</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <!-- <link rel="javaScript" href="scriptingFile.js"> -->
+     
     </head>
 
 
     <body id="homebody">
-    <!-- Navigation Bar -->
+   <!-- Navigation Bar -->
 
     <div class="navbar">
         <div class="logo"> 
@@ -21,7 +21,7 @@
       </div>
       
         <nav>
-          <ul id="menuList">
+          <ul>
             <li><a href="Homepage.html" accesskey="h">Home</a></li>
             <li><a href="Skincare.html" accesskey="s">Skin Care</a></li>
             <li><a href="MakeUp.html" accesskey="m">Makeup</a></li>
@@ -33,27 +33,8 @@
             <a href="UserPage.html" accesskey="u"><img src="homepage-images/user.png" alt="user page" id="userticon"></a>
             <a href="CartPage.html" accesskey="c"><img src="homepage-images/cart.png" alt="cart page" id="carticon"></a>
             <input type="image" src="homepage-images/darktheme.png" alt="darktheme" width="33rem" id="themeSelect">
-            <img src="homepage-images/menu.png" alt="menu" onclick="toggleMenu()"  class="menu-icon" >
-
         </div>
-         
     </div>
-    <script>
-
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
-        
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
-                menuList.style.maxHeight = "300px";
-            }
-            else{
-                menuList.style.maxHeight = "0px";
-            }
-        }
-    </script>
-
 
 
        
@@ -300,12 +281,8 @@
         <p>&copy; 2024 Aura. All rights reserved</p>
         </div>
     </footer>
-    <script src="scriptingFile.js">
+     <script src="home.js"></script>
 
-    </script>
-    <script src="theme.js">
-       
-    </script>
 </body>
 
 </html>
