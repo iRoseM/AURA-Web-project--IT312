@@ -420,26 +420,87 @@ body.dark-mode li#CurrentPage a {
   width: 100%;
   height: auto;
   overflow: hidden;
-  
+  position: relative;
+  display: inline-block; 
+  margin: 0;
 }
 
-.bannerSlider {
+.banner-text{
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  color: white;
+  font-weight: lighter;
+  text-align: left;
+  font-size: 1.7rem;
+  padding-right: 3rem;
+
+}/* Banner Section */
+.banner {
   position: relative;
   width: 100%;
+  height: auto;
+}
+
+.slider-wrapper {
+  position: relative;
   max-width: 100%;
   overflow: hidden;
 }
 
-.banner-image {
+/* Slider */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for image sliding */
+}
+
+.slider img {
   width: 100%;
-  height: 43.75em;
-  display: block;
+  height: 75vh; /* Adjust height as needed */
   object-fit: cover;
+  flex-shrink: 0; /* Prevent image shrinkage */
+}
+
+/* Slider Navigation */
+.slider-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-nav a {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.slider-nav a:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.banner-text {
+  position: absolute;
+  top: 65%;
+  right: 10; /* Align text to the left */
+  transform: translateX(0); /* Remove horizontal centering */
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  font-weight: lighter;
+  text-align: left; /* Ensures the text is aligned to the left */
+  font-size: 1.7rem;
+  padding-right: 3rem;
+  /* max-width: 80%; */
 }
 
 .vision {
   width: 100%;
   background-color: #d3cbc2;
+  margin: 0;
 }
 
 .vision-image {

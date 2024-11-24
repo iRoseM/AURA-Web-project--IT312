@@ -128,6 +128,49 @@ document.addEventListener('DOMContentLoaded', () => {
       detailsDiv.style.left = `${event.clientX - review.getBoundingClientRect().left + 10}px`;
     });
   });
+
+  // --- Slider Functionality ---
+  const slider = document.querySelector(".slider");
+  const images = slider.querySelectorAll("img");
+  const navLinks = document.querySelectorAll(".slider-nav a");
+
+  let currentIndex = 0;
+
+  // Function to go to the current slide
+  function goToSlide(index) {
+    const slideWidth = slider.offsetWidth;
+    slider.style.transform = `translateX(-${slideWidth * index}px)`;
+    currentIndex = index;
+    updateNav();
+  }
+
+  // Update navigation dots to reflect the active slide
+  function updateNav() {
+    navLinks.forEach((link, index) => {
+      if (index === currentIndex) {
+        link.style.backgroundColor = "rgba(255, 255, 255, 1)";
+      } else {
+        link.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
+      }
+    });
+  }
+
+  // Add event listeners to navigation dots
+  navLinks.forEach((link, index) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      goToSlide(index);
+    });
+  });
+
+  // Automatically move to the next slide every 5 seconds
+  setInterval(() => {
+    let nextIndex = (currentIndex + 1) % images.length;
+    goToSlide(nextIndex);
+  }, 5000); // Change slide every 5 seconds
+
+  // Initialize the first slide
+  goToSlide(0);
 });
 
 
