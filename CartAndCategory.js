@@ -104,3 +104,4 @@ function updateCartUI() {
         totalElement.value = `${totalCost.toFixed(2)} SAR`;
     }
 }
+
