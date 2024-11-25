@@ -79,8 +79,10 @@ body.dark-mode button:hover {
     display: block;
     min-width: 2em;
     position: relative;
-    left: 5em;
-    width: 1em;
+    left: 3em;
+    right: 3em;
+    width: 0.8em;
+    bottom: 0.08em;
 
   }
   .user-cart img {
@@ -90,9 +92,10 @@ body.dark-mode button:hover {
   
   }
   #themeSelect{
-    width: 1.9em;
+    width: 1.7em;
     position: relative;
-    left: 2.7em;
+    left: 2em;
+    bottom: 0.08em;
   
   }
 
@@ -510,8 +513,8 @@ body.dark-mode li#CurrentPage a {
 }
 
 .homeoffer img {
-  width: 80%;
-  height: 12.5em;
+  width: 90%;
+  height: 23em;
   object-fit: cover;
   border-radius: 0.5em;
   margin-bottom: 0.625em;
