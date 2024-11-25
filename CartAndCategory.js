@@ -1,5 +1,10 @@
-// Cart functionality
+// ---------------first code-------------------------------------
 window.onload = function () {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.getElementById('cartItems');
+    let totalCost = 0;
+
+    // Cart functionality
     updateCartUI(); // Initialize the cart UI
 
     // Attach functionality to checkout button
@@ -61,8 +66,8 @@ function updateCartUI() {
 
         // Product Image
         const itemImage = document.createElement("img");
-        itemImage.src = item.Image;
-        itemImage.alt = item.name;
+        itemImage.src = item.image || item.Image || 'default.jpg'; // Support both formats
+        itemImage.alt = item.name || "Product Image";
         itemDiv.appendChild(itemImage);
 
         // Item Info
@@ -105,3 +110,80 @@ function updateCartUI() {
     }
 }
 
+// Add to Cart Functionality
+function addToCart(productId) {
+    const product = document.getElementById(productId);
+    if (!product) return; // Exit if the product element is not found
+
+    // Retrieve product details
+    const productName = product.querySelector('.cateprodTitle')?.innerText || "Unknown Product";
+    const productPrice = parseFloat(
+        product.querySelector('.cateprodPrice')?.innerText.replace(' SAR', '').trim()
+    ) || 0;
+    const productImage = product.querySelector('.cateprodPic')?.getAttribute('src') || ""; // Get the main image
+
+    // Retrieve quantity
+    const quantityElement = product.querySelector('.quantity');
+    const quantity = quantityElement ? parseInt(quantityElement.innerText) : 1;
+
+    // Create a cart item object
+    const cartItem = {
+        name: productName,
+        price: productPrice,
+        image: productImage, // Use consistent lowercase 'image' property
+        quantity: quantity,
+    };
+
+    // Update the cart in localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingItemIndex = cart.findIndex((item) => item.name === productName);
+
+    if (existingItemIndex !== -1) {
+        // If the item exists, update its quantity
+        cart[existingItemIndex].quantity += quantity;
+    } else {
+        // Add the new item to the cart
+        cart.push(cartItem);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Calculate total cost and display an alert with the total
+    const updatedTotalCost = calculateTotalCost(cart); // Get the latest total cost
+    alert(`${productName} has been added to the cart! Total cost is ${updatedTotalCost.toFixed(2)} SAR.`);
+}
+
+// Update quantity of an item in the cart
+function updateQuantity(index, operation) {
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (operation === "increment") {
+        cartItems[index].quantity += 1;
+    } else if (operation === "decrement" && cartItems[index].quantity > 1) {
+        cartItems[index].quantity -= 1;
+    }
+
+    // Update localStorage
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+
+    // Reload the cart UI
+    window.onload();
+}
+
+// Remove an item from the cart
+function removeItemFromCart(index) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItems.splice(index, 1); // Remove the item at the specified index
+
+    // Update localStorage
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+
+    // Reload the cart UI
+    window.onload();
+}
+
+// Empty the entire cart
+function emptyCart() {
+    localStorage.removeItem('cart');
+    window.onload();
+}
