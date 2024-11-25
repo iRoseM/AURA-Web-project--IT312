@@ -23,9 +23,6 @@ body.dark-mode button:hover {
   color: #2c2c2c;
 }
 
-
-
-
 /* For medium screens, like smaller laptops */
  @media (max-width: 1200px) {
   body {
@@ -583,11 +580,14 @@ body.dark-mode li#CurrentPage a {
 }
 
 .homediscount-box {
-  top: 0.625em;
-  left: 1.25em;
-  padding: 0.313em;
-  font-size: 0.875em;
-  border-radius: 0.25em;
+  position: absolute;
+  top: 0.625em; /* Align to the top */
+  left: 0; /* Align to the right */
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 0.313em 0.625em;
+  font-size: 1.125em;
+  border-radius: 0.625em;
 }
 
 .homeprice {
@@ -2238,13 +2238,64 @@ div.cart-controls {
 }
 
 /**************************** Dark Theme for Cart Page ****************************/
- 
+body.dark-mode {
+  background-color: #1e1e1e; /* Dark background */
+  color: #f5f5f5; 
+}
+
 body.dark-mode .container {
   background-color: #1e1e1e;
   color: #f5f5f5;
 }
 
-body.dark-mode .cart-header {
+body.dark-mode .cart-item {
+  background-color: #2a2a2a; /* Darker background for items */
+  border: 1px solid #444; 
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); 
+}
+
+body.dark-mode .cart-item img {
+  background-color: #333; /* Dark background for images */
+  border-radius: 5px;
+}
+
+body.dark-mode .item-info p {
+  color: #ddd; /* Softer white for text */
+}
+
+body.dark-mode .quantity-controls .quantity-btn,
+body.dark-mode .remove-btn {
+  background-color: #444; /* Dark buttons */
+  color: #f5f5f5; /* Light text */
+  border: none;
+}
+
+body.dark-mode .quantity-controls .quantity-btn:hover,
+body.dark-mode .remove-btn:hover {
+  background-color: #666; /* Lighter dark on hover */
+}
+
+body.dark-mode .quantity-display {
+  background-color: #333; /* Darker field */
+  color: #bbb; /* Softer text */
+  border: 1px solid #555;
+}
+
+body.dark-mode .thank-you-message {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Soft white glow */
+}
+
+body.dark-mode .thank-you-message h1 {
+  color: #e8a2a8; /* Highlighted heading */
+}
+
+body.dark-mode .thank-you-message p {
+  color: #ccc; /* Softer paragraph text */
+}
+
+body.dark-mode .cart-controls {
   color: #f5f5f5;
 }
 
@@ -2257,27 +2308,10 @@ body.dark-mode button,
 body.dark-mode .qty-btn,
 body.dark-mode .remove-btn,
 body.dark-mode .empty-btn {
-  background-color: #444;
-  color: #f5f5f5;
+  background-color: #444; /* Uniform button background */
+  color: #f5f5f5; 
 }
 
-body.dark-mode .productCart {
-  border-bottom: 1px solid #444;
-}
-
-body.dark-mode .ImgCart {
-  background-color: #555;
-}
-
-body.dark-mode .thank-you-message {
-  background-color: #2a2a2a;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode .thank-you-message h1 {
-  color: #e8a2a8;
-}
-
-body.dark-mode .thank-you-message p {
-  color: #ddd;
+body.dark-mode button:hover {
+  background-color: #666; 
 }
