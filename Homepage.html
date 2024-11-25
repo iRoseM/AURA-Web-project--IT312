@@ -108,7 +108,7 @@
                         <p class="star"> &#9733; &#9733; &#9733; &#9733; &#9733;</p>
                         <p class="homedescription">A gentle cleansing oil that removes impurities while nourishing the skin.</p>
                         <p class="homeprice">90 SAR</p>
-                        <button class="homeadd-to-cart" onclick="addToCart('product-1')">Add to Cart</button>
+                        <button class="homeadd-to-cart">Add to Cart</button>
                     </div>
                     <div class="homeoffer">
                         <div class="imageContainer">
@@ -313,43 +313,6 @@
     </footer>
      <script src="home.js">
 
-    </script>
-    <script>
-        // Handle add to cart functionality
-        function addToCart(productId) {
-            const product = document.getElementById(productId);
-            if (!product) return;
-
-            const productName = product.querySelector('.cateprodTitle')?.innerText || "Unknown Product";
-            const productPrice = product.querySelector('.cateprodPrice')?.innerText.replace(' SAR', '').trim() || "0";
-            const productImage = product.querySelector('.cateprodPic')?.src || "";
-
-            const quantity = 1; // Default quantity
-
-            const cartItem = {
-                name: productName,
-                price: parseFloat(productPrice),
-                quantity: quantity,
-                image: productImage,
-            };
-
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingItemIndex = cart.findIndex(item => item.name === productName);
-
-            if (existingItemIndex > -1) {
-                cart[existingItemIndex].quantity += 1;
-            } else {
-                cart.push(cartItem);
-            }
-
-            localStorage.setItem('cart', JSON.stringify(cart));
-
-            alert(`${productName} has been added to the cart!`);
-        }
-    </script>
-
-    <script src="CartAndCategory.js">
-        
     </script>
     <script src="theme.js">
         
