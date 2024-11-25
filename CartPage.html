@@ -74,7 +74,24 @@
             </div>
         </section>
     </div>
-
+    <div class="container">
+        <section class="cart">
+            <div class="cart-header">
+                <h2 class="CartHeader">Your Cart</h2>
+                <div   class="cartDiv">
+                    <label for="total"  class="cartTotal">Total:</label>
+                    <input type="text" id="total" value="0.00 SAR" disabled >
+                    <a href="Checkout.html"  class="checkoutLink">
+                        Checkout
+                    </a>
+                </div>
+                <div id="cartItems"></div>
+            </div>
+            <div class="cart-controls">
+                <button class="empty-btn" onclick="emptyCart()">Empty Cart</button>
+            </div>
+        </section>
+    </div>
     <footer class="main-footer">
         <div class="contact">
             <p>Contact Information</p>

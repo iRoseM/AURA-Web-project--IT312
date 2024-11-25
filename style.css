@@ -2079,7 +2079,32 @@ body.dark-mode #sort {
 }
 /**************************** Styling Cart Page ****************************/
 .container {
-  max-width: 1000px;
+  max-width: 820px;
+}
+div.cartDiv{
+
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  justify-content: flex-end;
+}
+label.cartTotal{
+  font-weight: bold;
+}
+input#total{
+  width: 100px; 
+  text-align: center; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+}
+a.checkoutLink{
+  padding: 10px 20px;
+   background-color: #333; 
+   color: white;
+   border: none;
+   border-radius: 5px; 
+   cursor: pointer;
+   text-decoration: none;
 }
 #cartItems {
   display: flex;
