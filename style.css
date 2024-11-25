@@ -108,61 +108,10 @@ body.dark-mode button:hover {
     flex: 0 0 55vw;
    
   }
+  p.banner-text{
+    font-size: 1.3em;
+  }
 
-    /* Responsive Evaluation page */
-    #OrderSelect select {
-     max-width: 25em;
-     position: relative;
-     right: 6em;
-
-    }
-    .orderEvaluation {
-      min-width: 0.1em;
-      max-width: 23em;
-      position: relative;
-      right: 15em;
-    }
-
-    .ProductImage {
-      min-width: 12em;
-      max-height: 8em;
-      position: relative;
-      bottom: 2em;
-      left: 4em;
-     
-    }
-
-    textarea {
-      max-width: 9em;
-      min-height: 0.1em;
-      max-height: 1.9em;
-      position: relative;
-      right: 22em;
-      top:  5em;
-    
-    }
-
-    button.submitBtn {
-
-    font-size: 1em;
-     position: relative;
-     max-height: 2em;
-     right: 13em;
-     top: 3em;
-    }
-
-    .brand-name, .qty, .rate {
-      text-align: left; /* Ensure consistent alignment */
-      font-weight: 500;
-      font-size: 0.3em;
-    }
-    
-    .brand-name, .qty {
-    position: relative;
-    top: 1em; 
-    left: 3em;
-    right: 66em;
-    }
     /* Responsive category page  */
  
     .cateproduct {
@@ -186,11 +135,13 @@ body.dark-mode button:hover {
       max-width:  20em; 
      
     }
+    div.container {
+      max-width: 420px;
+    }
+
+
    
 }
-
-
-
 
 /***************************** Navigation bar ****************************/
 .navbar {
