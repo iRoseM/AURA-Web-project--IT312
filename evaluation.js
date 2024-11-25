@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(`Thank you for your feedback! Your rating for product#${productNumber} is ${userRating}`);
 
       // Redirect to the homepage
-      window.location.href = "Homepage.html"; // Update this to your homepage path
+      window.location.href = "index.html"; // Update this to your homepage path
     });
   });
 
