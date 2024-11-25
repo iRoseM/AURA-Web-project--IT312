@@ -284,6 +284,49 @@
         <p>&copy; 2024 Aura. All rights reserved</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const formContainer = document.querySelector(".formContainer");
+        const form = formContainer.querySelector("form");
+        const inputs = formContainer.querySelectorAll("input, select");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Check if all inputs are valid
+            let allValid = true;
+            let errorMessages = [];
+
+            inputs.forEach(input => {
+                // Check for required fields
+                if (input.hasAttribute("required") && input.value.trim() === "") {
+                    allValid = false;
+                    errorMessages.push(`${input.previousElementSibling.innerText} is required.`);
+                    input.classList.add("error"); // Add error class for styling
+                } else {
+                    input.classList.remove("error"); // Remove error class if valid
+                }
+
+                // Additional validation for specific inputs
+                if (input.id === "originalPrice" && input.type === "number") {
+                    if (parseFloat(input.value) <= 0 || isNaN(input.value)) {
+                        allValid = false;
+                        errorMessages.push("Original Item Price must be a positive number.");
+                        input.classList.add("error");
+                    }
+                }
+            });
+
+            if (!allValid) {
+                alert("Please fix the following errors:\n" + errorMessages.join("\n"));
+                return; // Stop submission if there are errors
+            }
+
+            alert("Form submitted successfully!");
+            form.submit(); // Only submit the form if all inputs are valid
+        });
+    });
+    </script>
     <script src="Seller.js">
 
     </script>
