@@ -123,4 +123,80 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error("Slider not found.");
   }
+
+  // --- Hover to Display Additional Review Details ---
+  const reviewItems = document.querySelectorAll('.review-item');
+  if (reviewItems.length === 0) {
+    console.error("No review items found.");
+    return;
+  }
+
+  reviewItems.forEach((review) => {
+    const reviewUser = review.querySelector('.review-user span');
+    if (!reviewUser) {
+      console.error("No review-user element found for this review.");
+      return;
+    }
+
+    // Extract required details
+    const customerName = reviewUser.textContent.split('★')[0].trim() || "Unknown";
+    const rating = reviewUser.textContent.split('★').slice(1).join('★').trim() || "No rating";
+    const feedback = review.querySelector('p')?.textContent.trim() || "No feedback available.";
+    const productName = Array.from(review.querySelectorAll('.homeproduct p'))
+      .map((product) => product.textContent.trim())
+      .join(', ') || "No products listed.";
+
+    // Debugging logs for extracted data
+    console.log('Customer Name:', customerName);
+    console.log('Rating:', rating);
+    console.log('Feedback:', feedback);
+    console.log('Product Names:', productName);
+
+    // Create the hover details div
+    const detailsDiv = document.createElement('div');
+    detailsDiv.className = 'hover-details';
+    detailsDiv.style.display = 'none'; // Initially hidden
+    detailsDiv.style.position = 'absolute';
+    detailsDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    detailsDiv.style.color = 'white';
+    detailsDiv.style.padding = '10px';
+    detailsDiv.style.borderRadius = '5px';
+    detailsDiv.style.maxWidth = '300px';
+    detailsDiv.style.zIndex = '1000';
+    detailsDiv.style.opacity = '0'; // Start with invisible state
+    detailsDiv.style.transition = 'opacity 0.3s ease-in-out'; // Smooth fade-in/out
+
+    // Populate hover details
+    detailsDiv.innerHTML = `
+      <strong>Customer:</strong> ${customerName}<br>
+      <strong>Product:</strong> ${productName}<br>
+      <strong>Rating:</strong> ${rating}<br>
+      <strong>Feedback:</strong> ${feedback}
+    `;
+
+    // Append the details div to the review
+    review.style.position = 'relative'; // Ensure the parent is relatively positioned
+    review.appendChild(detailsDiv);
+
+    // Show the hover details on mouseenter
+    review.addEventListener('mouseenter', () => {
+      detailsDiv.style.display = 'block';
+      setTimeout(() => (detailsDiv.style.opacity = '1'), 0); // Fade-in effect
+    });
+
+    // Hide the hover details on mouseleave
+    review.addEventListener('mouseleave', () => {
+      detailsDiv.style.opacity = '0'; // Fade-out effect
+      setTimeout(() => (detailsDiv.style.display = 'none'), 300); // Wait for fade-out to complete
+    });
+
+    // Adjust hover details position dynamically
+    review.addEventListener('mousemove', (event) => {
+      detailsDiv.style.top = `${event.clientY - review.getBoundingClientRect().top + 10}px`;
+      detailsDiv.style.left = `${event.clientX - review.getBoundingClientRect().left + 10}px`;
+    });
+  });
 });
+
+
+
