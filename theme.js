@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menuimg.src = "homepage-images/menu-dark.png"; 
       } else {
         selectorimg.src = "homepage-images/darktheme.png";
-        logoimg.src = "AuraLogo1.png";
+        logoimg.src = "homepage-images/logo.png";
         cartimg.src = "homepage-images/cart.png";
         userimg.src = "homepage-images/user.png";
         menuimg.src = "homepage-images/menu.png";
